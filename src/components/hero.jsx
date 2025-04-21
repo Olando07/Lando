@@ -13,21 +13,24 @@ function Hero() {
                 </h3>
             </div>
             <div>
-                <div class="social-icons">
+                
+            </div>
+            <div>
+                <div className="social-icons">
                     <a href="#" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i className="fa-brands fa-linkedin"></i>
                     </a>
                     <a href="https://github.com/Olando07" target="_blank">
-                        <i class="fa-brands fa-github"></i>
+                        <i className="fa-brands fa-github"></i>
                     </a>
                     <a href="#" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
+                        <i className="fa-brands fa-instagram"></i>
                     </a>
                     <a href="#" target="_blank">
-                        <i class="fa-brands fa-discord"></i>
+                        <i className="fa-brands fa-discord"></i>
                     </a>
                 </div>
-                <a href="#" class="btn">
+                <a href="#" className="btn">
                     Hire me
                 </a>
             </div>

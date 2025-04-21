@@ -1,5 +1,5 @@
 import React from "react";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuIndicator, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuViewport } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Link, useLocation } from "react-router";
 import "../css/nav.css";
 
@@ -14,19 +14,18 @@ function Footer() {
                     <NavigationMenu>
                         <NavigationMenuList>
                             <NavigationMenuItem>
-                                <Link className={pathname === "/Lando/Home" ? "active" : ""} to="/Lando/Home">
-                                    <NavigationMenuLink>Home</NavigationMenuLink>
-                                </Link>
+                                <NavigationMenuLink>
+                                    <Link className={pathname === "/Lando/" ? "active" : ""} to="/Lando/">
+                                        Home
+                                    </Link>
+                                </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Link className={pathname === "/Lando/About-me" ? "active" : ""} to="/Lando/About-me">
-                                    <NavigationMenuLink>About Me</NavigationMenuLink>
-                                </Link>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <Link className={pathname === "/Lando/Contact" ? "active" : ""} to="/Lando/Contact">
-                                    <NavigationMenuLink>Contact</NavigationMenuLink>
-                                </Link>
+                                <NavigationMenuLink>
+                                    <Link className={pathname === "/Lando/Contact" ? "active" : ""} to="/Lando/Contact">
+                                        Contact
+                                    </Link>
+                                </NavigationMenuLink>
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
