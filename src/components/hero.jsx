@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/main.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 function Hero() {
     return (
@@ -12,8 +14,10 @@ function Hero() {
                     I am a <span></span>
                 </h3>
             </div>
-            <div className="about-me"> 
-                <h3>Get to know me</h3>
+            <div className="about-me">
+                <h3>
+                    Get to know me <FontAwesomeIcon icon="fa-solid fa-folder-open" />
+                </h3>
                 <p>As a young full stack web developer ready for any and every oppourtunuity that comes my way. I have experience using various coding/programming languages and software such as HTML, CSS, Tailwindcss, Javascript, Typescript, React, Java, PHP, Python, MySql, PostgreSql, Ruby on Rails and Nodejs. I completed a 2 year course at Red River College in 2026. </p>
             </div>
             <div className="iconsdiv">

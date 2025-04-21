@@ -4,6 +4,13 @@ import Footer from "./components/footer";
 import Hero from "./components/hero";
 import { Routes, Route } from "react-router";
 import ContactMe from "./components/contact-me";
+import ReactDOM from "react-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter, faFontAwesome } from "@fortawesome/free-brands-svg-icons";
+
+
+library.add(fas, faTwitter, faFontAwesome );
 
 function App() {
     return (
@@ -18,8 +25,8 @@ function App() {
                 <div className="color">
                     <div className="color1"></div>
                     <div className="color2"></div>
-                </div>
                     <div className="color3"></div>
+                </div>
             </main>
         </>
     );

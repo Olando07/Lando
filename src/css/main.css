@@ -21,11 +21,11 @@
 
 /* social icons */
 .social-icons a {
-    color: #0066cc;
+    color: rgba(0, 0, 0, 0.9);
     background-color: transparent;
     width: 1.8rem;
     height: 1.8rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -107,12 +107,17 @@ span {
 }
 
 .hero .headingdiv, .hero .iconsdiv {
-    margin: 40px auto 50px;
+    margin: 60px auto;
     text-align: center;
 }
 
 .hero .about-me h3 {
-    font-size: 20px;
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.hero .about-me p {
+    font-size: 17px;
 }
 
 /* Keyframes */
