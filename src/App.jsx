@@ -15,6 +15,11 @@ function App() {
                     <Route path="Lando/Contact" element={<ContactMe></ContactMe>}></Route>
                 </Routes>
                 <Footer></Footer>
+                <div className="color">
+                    <div className="color1"></div>
+                    <div className="color2"></div>
+                </div>
+                    <div className="color3"></div>
             </main>
         </>
     );

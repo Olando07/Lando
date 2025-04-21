@@ -1,8 +1,9 @@
 import React from 'react';
+import "../css/main.css";
 
 function ContactMe() {
     return (
-        <div>
+        <div className='contact'>
             wow
         </div>
     );

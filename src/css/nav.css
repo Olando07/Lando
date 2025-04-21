@@ -1,3 +1,19 @@
+:root {
+    --grey-1: hsl(212, 33%, 89%);
+    --grey-2: hsl(210, 31%, 80%);
+    --grey-3: hsl(211, 27%, 70%);
+    --grey-4: hsl(209, 23%, 60%);
+    --grey-5: hsl(210, 22%, 49%);
+    --grey-6: hsl(209, 28%, 39%);
+    --grey-7: hsl(209, 34%, 30%);
+    --grey-8: hsl(211, 39%, 23%);
+    --grey-9: hsl(209, 61%, 16%);
+    --white: #fff;
+    --black: #000;
+    --main-blue: #0066cc;
+    --second-blue: rgb(76, 157, 233);
+}
+
 body {
     overflow-x: hidden;
 }
@@ -55,8 +71,8 @@ body .color {
     height: 520px;
     width: 520px;
     border-radius: 9999px;
-    filter: blur(140px);
-    opacity:.5;
+    filter: blur(110px);
+    opacity:.4;
     background-color: var(--main-blue);
 }
 
@@ -65,14 +81,32 @@ body .color {
     width: 520px;
     border-radius: 9999px;
     filter: blur(110px);
-    opacity:.5;
+    opacity:.4;
     background-color: var(--second-blue);
+}
+
+.color3 {
+    height: 620px;
+    width: 620px;
+    border-radius: 999px;
+    filter: blur(110px);
+    opacity:.4;
+    background-color: #57d4d899;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    top: 320px;
+    left: 450px; 
 }
 
 /* light mode */
 body.light .nav-links a:hover {
     background: #000;
     color: #fff;
+}
+
+body.light .color1, body.light .color2, body.light .color3 {
+    opacity: .8
 }
 
 /* dark mode */

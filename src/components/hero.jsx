@@ -4,7 +4,7 @@ import "../css/main.css";
 function Hero() {
     return (
         <div className="hero">
-            <div>
+            <div className="headingdiv">
                 <h1 className="heading">
                     Hello there, it's <span>Olando</span>. Welcome to my portfolio site.
                 </h1>
@@ -12,10 +12,11 @@ function Hero() {
                     I am a <span></span>
                 </h3>
             </div>
-            <div>
-                
+            <div className="about-me"> 
+                <h3>Get to know me</h3>
+                <p>As a young full stack web developer ready for any and every oppourtunuity that comes my way. I have experience using various coding/programming languages and software such as HTML, CSS, Tailwindcss, Javascript, Typescript, React, Java, PHP, Python, MySql, PostgreSql, Ruby on Rails and Nodejs. I completed a 2 year course at Red River College in 2026. </p>
             </div>
-            <div>
+            <div className="iconsdiv">
                 <div className="social-icons">
                     <a href="#" target="_blank">
                         <i className="fa-brands fa-linkedin"></i>
@@ -33,10 +34,6 @@ function Hero() {
                 <a href="#" className="btn">
                     Hire me
                 </a>
-            </div>
-            <div className="color">
-                <div className="color1"></div>
-                <div className="color2"></div>
             </div>
         </div>
     );
