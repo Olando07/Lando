@@ -27,6 +27,13 @@ function Footer() {
                                     </Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
+                            <NavigationMenuItem>
+                                <NavigationMenuLink>
+                                    <Link className={pathname === "/Lando/Projects" ? "active" : ""} to="/Lando/Projects">
+                                        Projects
+                                    </Link>
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
                 </div>

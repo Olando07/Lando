@@ -28,7 +28,7 @@ body {
 
 .header {
     gap: 10px;
-    margin: 40px 580px;
+    margin: 40px 520px;
     padding: 10px;
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -50,7 +50,7 @@ body.dark .header {
 
 .header div a {
     font-size: 19px;
-    margin: 0 9px;
+    margin: 0 7px;
 }
 
 .footer div a {

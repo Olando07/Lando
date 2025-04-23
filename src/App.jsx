@@ -1,13 +1,15 @@
 import "./App.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Hero from "./components/hero";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 import { Routes, Route } from "react-router";
-import ContactMe from "./components/contact-me";
+import ContactMe from "./components/Contact-me";
 import ReactDOM from "react-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faFontAwesome } from "@fortawesome/free-brands-svg-icons";
+import Projects from "./components/Projects";
 
 
 library.add(fas, faTwitter, faFontAwesome );
@@ -19,6 +21,7 @@ function App() {
                 <Header></Header>
                 <Routes basename="/Lando">
                     <Route path="Lando/" element={<Hero></Hero>}></Route>
+                    <Route path="Lando/Projects" element={<Projects></Projects>}></Route>
                     <Route path="Lando/Contact" element={<ContactMe></ContactMe>}></Route>
                 </Routes>
                 <Footer></Footer>
