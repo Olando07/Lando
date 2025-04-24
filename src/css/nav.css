@@ -64,17 +64,12 @@ body {
 }
 
 /* Glowing Backgrounds */
-.color,
+.color1,
+.color2,
 .color3 {
     position: absolute;
     z-index: -1;
     inset: 0;
-}
-
-.color {
-    display: flex;
-    justify-content: center;
-    top: 50px;
 }
 
 .color1,
@@ -83,25 +78,29 @@ body {
     border-radius: 9999px;
     filter: blur(110px);
     opacity: 0.4;
+    display: flex;
+    justify-content: center;
 }
 
 .color1 {
-    width: 540px;
-    height: 540px;
+    width: 620px;
+    height: 620px;
     background-color: var(--main-blue);
+    left: 190px;
 }
 
 .color2 {
-    width: 540px;
-    height: 540px;
+    width: 620px;
+    height: 620px;
     background-color: var(--second-blue);
+    left: 720px;
 }
 
 .color3 {
     width: 640px;
     height: 640px;
     background-color: #57d4d899;
-    top: 200px;
+    top: 280px;
     left: 450px;
 }
 

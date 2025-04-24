@@ -18,6 +18,7 @@
 * {
     box-sizing: border-box;
     text-decoration: none;
+    overflow-x: hidden;
 }
 
 /* Social Icons */
@@ -80,9 +81,9 @@
 }
 
 .hero .headingdiv,
-.hero .iconsdiv,
+.hero .iconsdiv, 
 .loading {
-    margin: 60px auto;
+    margin: 55px auto;
     text-align: center;
 }
 
