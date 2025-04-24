@@ -5,7 +5,7 @@ import { Moon, Sun } from "lucide-react";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { AvatarDemo } from "./avatar";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import "../css/nav.css";
 
 function Header() {
@@ -23,35 +23,26 @@ function Header() {
     }, [theme]);
 
     /* active tab setup */
-    const { pathname } = useLocation();
+    // const { pathname } = useLocation();
+    const links = [
+        { to: "/Lando/", label: "Home" },
+        { to: "/Lando/Projects", label: "Projects" },
+        { to: "/Lando/Contact", label: "Contact" },
+    ];
 
     return (
         <>
             <div className="header">
                 <div className="nav-links">
                     <NavigationMenu>
-                        <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink>
-                                    <Link className={pathname === "/Lando/" ? "active" : ""} to="/Lando/">
-                                        Home
-                                    </Link>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink>
-                                    <Link className={pathname === "/Lando/Projects" ? "active" : ""} to="/Lando/Projects">
-                                        Projects
-                                    </Link>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink>
-                                    <Link className={pathname === "/Lando/Contact" ? "active" : ""} to="/Lando/Contact">
-                                        Contact
-                                    </Link>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
+                        <NavigationMenuList className="flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
+                            {links.map(({ to, label }) => (
+                                <NavigationMenuItem key={to}>
+                                    <NavigationMenuLink className="w-full">
+                                        <Link to={to}>{label}</Link>
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+                            ))}
                         </NavigationMenuList>
                     </NavigationMenu>
                 </div>

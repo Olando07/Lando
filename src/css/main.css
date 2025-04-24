@@ -12,6 +12,7 @@
     --black: #000;
     --main-blue: #0066cc;
     --second-blue: rgb(76, 157, 233);
+    --third-blue: #0053a6;
 }
 
 * {
@@ -19,7 +20,7 @@
     text-decoration: none;
 }
 
-/* social icons */
+/* Social Icons */
 .social-icons a {
     color: rgba(0, 0, 0, 0.9);
     background-color: transparent;
@@ -31,26 +32,26 @@
     align-items: center;
     margin: 3rem 1.3rem 3rem 0;
     padding: 18px;
-    border: 0.15rem solid #0066cc;
+    border: 0.15rem solid var(--second-blue);
     border-radius: 50%;
     transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: black;
-    background-color: #0066cc;
-    box-shadow: 0 0 16px #0066cc;
+    color: var(--black);
+    background-color: var(--second-blue);
+    box-shadow: 0 0 16px var(--second-blue);
     transform: scale(1.3) translateY(-5px);
 }
 
-/* Button Styles */
+/* Button */
 .btn {
-    color: #0066cc;
+    color: var(--white);
     background-color: transparent;
     font-size: 1rem;
     font-weight: 700;
     display: inline-block;
-    border: 2.2px solid #0066cc;
+    border: 2.2px solid var(--second-blue);
     padding: 0.5rem 1.2rem;
     border-radius: 4rem;
     letter-spacing: 1px;
@@ -61,19 +62,33 @@
 }
 
 .btn:hover {
-    color: black;
-    background-color: #0066cc;
+    color: var(--black);
+    background-color: var(--second-blue);
     transform: scale(1.03);
-    box-shadow: 0 0 25px #0066cc;
+    box-shadow: 0 0 25px var(--second-blue);
 }
 
-/* Typing Text Styles */
-span {
-    color: #0074cc;
-}
-
-.hero, .contact, .projects {
+/* Hero Section */
+.hero,
+.contact,
+.projects {
     padding: 0 250px;
+}
+
+.hero span {
+    color: var(--second-blue);
+}
+
+.hero .headingdiv,
+.hero .iconsdiv,
+.loading {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.loading {
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
 }
 
 .hero div .heading {
@@ -91,24 +106,19 @@ span {
 }
 
 .hero div .typing-text span::before {
-    color: #0066cc;
     content: "software developer";
+    color: var(--second-blue);
     animation: words 20s infinite;
 }
 
 .hero div .typing-text span::after {
     content: "";
     position: absolute;
+    right: -15px;
     width: 4px;
     height: 100%;
-    border-left: 3px solid #0066cc;
-    right: -15px; /* Add space between the last letter and the cursor */
+    border-left: 3px solid var(--second-blue);
     animation: cursor 0.6s infinite;
-}
-
-.hero .headingdiv, .hero .iconsdiv {
-    margin: 60px auto;
-    text-align: center;
 }
 
 .hero .about-me h3 {
@@ -120,7 +130,7 @@ span {
     font-size: 17px;
 }
 
-/* Keyframes */
+/* Animations */
 @keyframes cursor {
     to {
         border-left: 3px solid transparent;
@@ -128,24 +138,19 @@ span {
 }
 
 @keyframes words {
-    0%,
-    20% {
+    0%, 20% {
         content: "Web developer";
     }
-    21%,
-    40% {
+    21%, 40% {
         content: "Software developer";
     }
-    41%,
-    60% {
+    41%, 60% {
         content: "Frontend developer";
     }
-    61%,
-    80% {
+    61%, 80% {
         content: "Backend developer";
     }
-    81%,
-    100% {
+    81%, 100% {
         content: "Fullstack developer";
     }
 }

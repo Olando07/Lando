@@ -10,9 +10,9 @@ function Hero() {
                 <h1 className="heading">
                     Hello there, it's <span>Olando</span>. Welcome to my portfolio site.
                 </h1>
-                <h3 className="typing-text">
+                <h2 className="typing-text">
                     I am a <span></span>
-                </h3>
+                </h2>
             </div>
             <div className="about-me">
                 <h3>

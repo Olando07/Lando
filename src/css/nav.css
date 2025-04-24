@@ -12,39 +12,40 @@
     --black: #000;
     --main-blue: #0066cc;
     --second-blue: rgb(76, 157, 233);
+    --third-blue: #429cf5;
 }
 
 body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     overflow-x: hidden;
 }
 
-/* header and footer */
-.header, .footer {
+/* Header and Footer */
+.header,
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 .header {
     gap: 10px;
-    margin: 40px 520px;
+    margin: 40px auto;
     padding: 10px;
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.6);
-    background: rgb(255, 255, 255, 0.6);
-}
-
-body.dark .header {
-    background: rgb(0, 0, 0, 0.5);
-    border: 1px solid #000000;
+    background: rgba(255, 255, 255, 0.6);
+    max-width: 500px;
 }
 
 .footer {
     margin: 30px 0 10px;
 }
 
-.header div a, .footer div a {
+.header div a,
+.footer div a {
     font-family: "Lexend", sans-serif;
 }
 
@@ -57,78 +58,160 @@ body.dark .header {
     font-size: 16px;
 }
 
-/* glowing background */
-body .color {
+.avatar {
+    width: 32px;
+    height: 32px;
+}
+
+/* Glowing Backgrounds */
+.color,
+.color3 {
     position: absolute;
     z-index: -1;
     inset: 0;
+}
+
+.color {
     display: flex;
     justify-content: center;
     top: 50px;
 }
 
-.color1 {
-    height: 520px;
-    width: 520px;
+.color1,
+.color2,
+.color3 {
     border-radius: 9999px;
     filter: blur(110px);
-    opacity:.4;
+    opacity: 0.4;
+}
+
+.color1 {
+    width: 540px;
+    height: 540px;
     background-color: var(--main-blue);
 }
 
 .color2 {
-    height: 520px;
-    width: 520px;
-    border-radius: 9999px;
-    filter: blur(110px);
-    opacity:.4;
+    width: 540px;
+    height: 540px;
     background-color: var(--second-blue);
 }
 
 .color3 {
-    height: 620px;
-    width: 620px;
-    border-radius: 999px;
-    filter: blur(110px);
-    opacity:.4;
+    width: 640px;
+    height: 640px;
     background-color: #57d4d899;
-    position: absolute;
-    z-index: -1;
-    inset: 0;
     top: 200px;
-    left: 450px; 
+    left: 450px;
 }
 
-/* light mode */
+/* Light Mode */
 body.light .nav-links a:hover {
-    background: #000;
-    color: #fff;
+    background: var(--black);
+    color: var(--white);
 }
 
-body.light .color1, body.light .color2, body.light .color3 {
-    opacity: .8
+body.light .color1,
+body.light .color2,
+body.light .color3 {
+    opacity: 0.6;
 }
 
-/* dark mode */
+body.light .social-icons a {
+    border-color: var(--third-blue);
+}
+
+body.light .social-icons a:hover,
+body.light .btn:hover {
+    background-color: var(--third-blue);
+    box-shadow: 0 0 16px var(--third-blue);
+    color: var(--white);
+}
+
+body.light .btn {
+    color: var(--black);
+    border-color: var(--third-blue);
+}
+
+body.light .hero span,
+body.light .hero div .typing-text span::before {
+    color: var(--white);
+}
+
+body.light .hero div .typing-text span::after {
+    border-color: var(--white);
+}
+
+/* Dark Mode */
+body.dark .header {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--black);
+}
+
 body.dark .btn {
-    color: var(--color-white);
+    color: var(--white);
 }
 
 body.dark .btn:hover {
-    color: var(--color-black);
+    color: var(--black);
 }
 
 body.dark .nav-links a:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white);
+    color: var(--black);
 }
 
 body.dark .social-icons a {
-    color: #fff;
+    color: var(--white);
 }
 
-/* @media(max-width: 380px) {
-    .header {
-        
+@media(max-width: 768px) {
+    body {
+        width: 100vw;
+        height: 100vh;
     }
-} */
+
+    .header {
+        margin: 10px 2px;
+        padding: 0;
+        flex-wrap: wrap; /* allows items to wrap on narrow screens */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* .header .nav-links ul, .footer .nav-links ul, .iconsdiv {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+
+    .header .nav-links ul li, .footer .nav-links ul li{
+        background-color: #555;
+    }
+
+    .header .nav-links {
+        width: 100%;
+        background-color: #777;
+    }
+
+    .header .nav-links ul li a {
+        font-size: 22px;
+        width: 100%;
+    } */
+
+
+}
+
+/* Optional: Responsive Adjustments */
+/*
+@media(max-width: 380px) {
+    .header {
+        // add responsive styles here
+    }
+}
+*/

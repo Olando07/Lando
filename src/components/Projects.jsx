@@ -1,10 +1,11 @@
 import React from "react";
+import "../css/main.css";
 
 function Projects() {
     return (
         <div className="projects">
             <div className="headingdiv">
-                <h1 className="heading">Projects</h1>
+                <h1>Projects</h1>
             </div>
             {/* Put a photo of each project first then add maybe a short description and link or make the pictue the link */}
             {/* add the web dev 1 project 4 */}
