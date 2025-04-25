@@ -1,1 +1,0 @@
-import{j as t}from"./index-CZ3ONiV4.js";function a(){return t.jsx("div",{className:"contact",children:t.jsx("div",{className:"headingdiv",children:t.jsx("h1",{children:"Contact Me"})})})}export{a as default};

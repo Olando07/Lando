@@ -1,0 +1,1 @@
+import{j as t}from"./index-P6a1CQl4.js";function a(){return t.jsx("div",{className:"contact",children:t.jsx("div",{className:"headingdiv",children:t.jsx("h1",{children:"Contact Me"})})})}export{a as default};
