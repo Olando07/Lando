@@ -1,7 +1,10 @@
 import React from "react";
 import "../css/main.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 function Hero() {
     return (
@@ -23,16 +26,16 @@ function Hero() {
             <div className="iconsdiv">
                 <div className="social-icons">
                     <a href="#" target="_blank">
-                        <i className="fa-brands fa-linkedin"></i>
+                        <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                     <a href="https://github.com/Olando07" target="_blank">
-                        <i className="fa-brands fa-github"></i>
+                        <FontAwesomeIcon icon={faGithub} />
                     </a>
                     <a href="#" target="_blank">
-                        <i className="fa-brands fa-instagram"></i>
+                        <FontAwesomeIcon icon={faInstagram} />
                     </a>
                     <a href="#" target="_blank">
-                        <i className="fa-brands fa-discord"></i>
+                        <FontAwesomeIcon icon={faDiscord} />
                     </a>
                 </div>
                 <a href="#" className="btn">
