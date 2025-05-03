@@ -15,7 +15,7 @@ function App() {
                 <Header />
                 <Suspense fallback={<div className="loading">Loading...</div>}>
                     <Routes basename="/Lando">
-                        <Route path="Lando/" element={<Hero />} />
+                        <Route path="Lando/" element={<Hero/>} />
                         <Route path="Lando/Projects" element={<Projects />} />
                         <Route path="Lando/Contact" element={<ContactMe />} />
                     </Routes>
