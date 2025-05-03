@@ -1,6 +1,6 @@
 import React from "react";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import "../css/nav.css";
 
 function Footer() {
