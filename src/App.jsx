@@ -12,15 +12,15 @@ function App() {
     return (
         <>
             <main>
-                <Header />
                 <Suspense fallback={<div className="loading">Loading...</div>}>
+                <Header />
                     <Routes basename="/Lando">
                         <Route path="Lando/" element={<Hero/>} />
                         <Route path="Lando/Projects" element={<Projects />} />
                         <Route path="Lando/Contact" element={<ContactMe />} />
                     </Routes>
-                </Suspense>
                 <Footer />
+                </Suspense>
             </main>
             <div className="color1"></div>
             <div className="color2"></div>
