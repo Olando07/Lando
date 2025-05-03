@@ -1,12 +1,11 @@
 import React, { Suspense } from "react";
 import "./css/main.css";
 import { Routes, Route } from "react-router";
-
-const Header = React.lazy(() => import("./Header.js")); 
-const Footer = React.lazy(() => import("./Footer.js"));
-const Hero = React.lazy(() => import("./Hero.js"));
-const Projects = React.lazy(() => import("./Projects.js"));
-const ContactMe = React.lazy(() => import("./Contact-me.js"));
+import Header from "./components/Header"; 
+import Footer from "./components/Footer.jsx";
+import Hero from "./components/Hero.jsx";
+import Projects from "./components/Projects.jsx";
+import ContactMe from "./components/Contact-me.jsx";
 
 function App() {
     return (
