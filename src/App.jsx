@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import "./css/main.css";
 import { Routes, Route } from "react-router";
-import Header from "./components/Header"; 
+import Header from "./components/Header.jsx"; 
 import Footer from "./components/Footer.jsx";
 import Hero from "./components/Hero.jsx";
 import Projects from "./components/Projects.jsx";
