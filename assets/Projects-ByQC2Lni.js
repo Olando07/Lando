@@ -1,1 +1,0 @@
-import{j as s}from"./index-P6a1CQl4.js";function r(){return s.jsx("div",{className:"projects",children:s.jsx("div",{className:"headingdiv",children:s.jsx("h1",{children:"Projects"})})})}export{r as default};
