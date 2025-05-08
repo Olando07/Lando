@@ -8,16 +8,34 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 
 function Hero() {
+    const code = `function loadExperience {\n   const frontend = [HTML, CSS , JavaScript, TypeScript React];\n   const backend = [Java, PostgreSql, nodeJS, Python, MySql, PHP];\n   let otherskills = [];\n   let passion = "A love for tech being knowledgeable in IT"\n   return {\n      developer: "Olando";\n      role: "Full Stack Web Developer" \n      connect() => 'Let's build something'  \n   }; \n}`;
+
     return (
         <div className="hero">
-            <div className="headingdiv">
-                <h1 className="heading">
-                    Hello there, it's <span>Olando</span>. Welcome to my portfolio site.
-                </h1>
-                <h2 className="typing-text">
-                    I am a <span></span>
-                </h2>
-            </div>
+            <section className="headingdiv">
+                <div className="welcome">
+                    <h1 className="heading">
+                        My name is <span>Olando.</span> <br></br>Welcome to my portfolio.
+                    </h1>
+                    <h2 className="typing-text">
+                        I am a <span></span>
+                    </h2>
+                </div>
+                
+                <div className="experience-div">
+                    <div className="experience">
+                        <div>
+                        <pre>
+                            <code>
+                                {code}
+                            </code>
+                        </pre>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+           
             <div className="about-me">
                 <h3>
                     Get to know me <FontAwesomeIcon icon={faFolderOpen} />
@@ -26,16 +44,16 @@ function Hero() {
             </div>
             <div className="iconsdiv">
                 <div className="social-icons">
-                    <a href="#" target="_blank">
+                    <a href="https://www.linkedin.com/in/olando-mcdonald-9bb708345/" target="_blank">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                     <a href="https://github.com/Olando07" target="_blank">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://www.instagram.com/lando_077/?next=%2F" target="_blank">
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://discordapp.com/users/1187420875662827590" target="_blank">
                         <FontAwesomeIcon icon={faDiscord} />
                     </a>
                 </div>
