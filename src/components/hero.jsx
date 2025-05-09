@@ -31,8 +31,7 @@ function Hero() {
                     <h2 className="typing-text">
                         I am a <span>{ roles[index]}</span><span className="cursor"></span>
                     </h2>
-                </div>
-                
+                </div> 
                 <div className="experience-div">
                     <div className="experience">
                         <div className="experience-subdiv">
