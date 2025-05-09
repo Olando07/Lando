@@ -14,7 +14,7 @@
     --second-blue: rgb(76, 157, 233);
     --third-blue: #0053a6;
     --fourth-blue: #34dcc3;
-    --span: #1b8e92;
+    --span-blue: #1b8e92;
 }
 
 * {
@@ -98,13 +98,9 @@ body {
     float: left;
     height: 50%;
     top: 60px;
-    left: 50px;
+    left: 30px;
     position: relative;
-    overflow-y: hidden;
-}
-
-.hero .welcome {
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .hero .experience-div {
@@ -124,16 +120,16 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.69);
 }
 
-.hero .experience div {
+.hero .experience code {
     color: transparent;
     background: linear-gradient(to right,#fff, var(--main-blue),var(--second-blue), var(--fourth-blue));
     background-clip: text;
-    font-size: 20px;
+    font-size: 15.5px;
     background-size: 200%;
-    animation: gradientText 3s linear infinite;
+    animation: gradient 3s linear infinite;
 }
 
-@keyframes gradientText {
+@keyframes gradient {
     0% {
         background-position: 200% 50%;
     } 100% {
@@ -166,38 +162,23 @@ body {
     font-size: 24px;
 }
 
-.hero div .typing-text {
+.typing-text {
     font-size: 24px;
     min-width: 280px;
 }
 
-.hero .experience {
-    font-size: 25px;
-}
-
-.hero div .typing-text span {
+.typing-text .cursor {
     position: relative;
 }
 
-.hero div .typing-text span::before {
-    content: "software developer";
-    animation: words 20s infinite;
-    overflow-y: hidden;
-}
-
-.hero div .typing-text span::after {
+.typing-text .cursor::after {
     content: "";
-    position: absolute;
-    right: -15px;
-    width: 4px;
-    height: 100%;
-    border-left: 3px solid var(--span);
-    animation: cursor 0.6s infinite;
-    overflow-y: hidden;
-}
-
-body.dark .hero div .typing-text span::after {
-    border-left: 3px solid var(--fourth-blue);
+    display: inline-block;
+    margin-left: 12px;
+    width: 3px;
+    height: 1.3em;
+    animation: heroCursor 0.7s steps(1) infinite;
+    background-color: var(--span-blue);
 }
 
 .hero .about-me h3 {
@@ -210,26 +191,11 @@ body.dark .hero div .typing-text span::after {
 }
 
 /* Animations */
-@keyframes cursor {
-    to {
-        border-left: 3px solid transparent;
+@keyframes heroCursor {
+    0%, 49% {
+        background-color: var(--span-blue);
     }
-}
-
-@keyframes words {
-    0%, 20% {
-        content: "Web developer";
-    }
-    21%, 40% {
-        content: "Software developer";
-    }
-    41%, 60% {
-        content: "Frontend developer";
-    }
-    61%, 80% {
-        content: "Backend developer";
-    }
-    81%, 100% {
-        content: "Fullstack developer";
+    50%, 100% {
+        background-color: transparent;
     }
 }

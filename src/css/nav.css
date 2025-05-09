@@ -12,9 +12,11 @@
     --black: #000;
     --main-blue: #0066cc;
     --second-blue: rgb(76, 157, 233);
-    --third-blue: #429cf5;
+    --third-blue: #0053a6;
+    --fourth-blue: #34dcc3;
+    --span-blue: #1b8e92;
     --teal: #57d4d899;
-    --span: #1b8e92;
+ 
 }
 
 body {
@@ -151,15 +153,14 @@ body.light .btn {
     border-color: var(--third-blue);
 }
 
-.hero span,
-.hero div .typing-text span {
-    color: var(--fourth-blue);
+.hero span{
+    color: var(--span-blue);
     font-size: 26px;
 }
 
-body.light .hero span,
-body.light .hero div .typing-text span {
-    color: var(--span);
+body.dark .hero span,
+body.dark .typing-text .cursor {
+    color: var(--fourth-blue);
 }
 
 /* Dark Mode */

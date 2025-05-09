@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/main.css";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -8,7 +9,17 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 
 function Hero() {
-    const code = `function loadExperience {\n   const frontend = [HTML, CSS , JavaScript, TypeScript React];\n   const backend = [Java, PostgreSql, nodeJS, Python, MySql, PHP];\n   let otherskills = [];\n   let passion = "A love for tech being knowledgeable in IT"\n   return {\n      developer: "Olando";\n      role: "Full Stack Web Developer" \n      connect() => 'Let's build something'  \n   }; \n}`;
+    const code = `function loadExperience {\n   const frontend = [HTML, CSS , JavaScript, TypeScript React];\n   const backend = [Java, PostgreSql, nodeJS, Python, MySql, PHP];\n   let otherskills = [];\n   let passion = "A love for tech being knowledgeable in IT";\n   return {\n      developer: "Olando";\n      role: "Full Stack Web Developer"; \n      connect() => 'Let's build something';  \n   }; \n}`;
+    const roles = ["Web developer", "Software developer", "Frontend developer", "Backend developer", "Fullstack developer"];
+
+    const [index, setIndex] = useState(0);
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setIndex((prev) => (prev + 1) % roles.length);
+        }, 2000);
+
+        return () => clearInterval(intervalId);
+    });
 
     return (
         <div className="hero">
@@ -18,21 +29,20 @@ function Hero() {
                         My name is <span>Olando.</span> <br></br>Welcome to my portfolio.
                     </h1>
                     <h2 className="typing-text">
-                        I am a <span></span>
+                        I am a <span>{ roles[index]}</span><span className="cursor"></span>
                     </h2>
                 </div>
                 
                 <div className="experience-div">
                     <div className="experience">
-                        <div>
+                        <div className="experience-subdiv">
                         <pre>
                             <code>
                                 {code}
                             </code>
                         </pre>
                         </div>
-                    </div>
-                    
+                    </div>   
                 </div>
             </section>
            
