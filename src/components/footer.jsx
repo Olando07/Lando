@@ -1,6 +1,5 @@
 import React from "react";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
-import { Link } from "react-router";
+
 import "../css/nav.css";
 
 function Footer() {
@@ -14,21 +13,21 @@ function Footer() {
 
     return (
         <>
-            <div className="footer">
+            <footer className="footer">
                 <div className="nav-links">
-                    <NavigationMenu>
-                        <NavigationMenuList className="flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
+                    <nav className="nav">
+                        <ul className="nav-ul flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
                             {links.map(({ to, label }) => (
-                                <NavigationMenuItem key={to}>
-                                    <NavigationMenuLink className="w-full">
-                                        <Link to={to}>{label}</Link>
-                                    </NavigationMenuLink>
-                                </NavigationMenuItem>
+                                <li key={to}>
+                                    <a className="w-full h-full" href={to}>
+                                        {label}
+                                    </a>
+                                </li>
                             ))}
-                        </NavigationMenuList>
-                    </NavigationMenu>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
+            </footer>
         </>
     );
 }

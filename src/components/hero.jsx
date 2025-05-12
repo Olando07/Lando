@@ -26,49 +26,50 @@ function Hero() {
             <section className="headingdiv">
                 <div className="welcome">
                     <h1 className="heading">
-                        My name is <span>Olando.</span> <br></br>Welcome to my portfolio.
+                        My name is <span>Olando</span>
                     </h1>
                     <h2 className="typing-text">
-                        I am a <span>{ roles[index]}</span><span className="cursor"></span>
+                        Welcome to my portfolio <br></br> I am a <span>{roles[index]}</span>
+                        <span className="cursor"></span>
                     </h2>
-                </div> 
+                </div>
                 <div className="experience-div">
                     <div className="experience">
                         <div className="experience-subdiv">
-                        <pre>
-                            <code>
-                                {code}
-                            </code>
-                        </pre>
+                            <pre>
+                                <code>{code}</code>
+                            </pre>
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </section>
-           
-            <div className="about-me">
-                <h3>
-                    Get to know me <FontAwesomeIcon icon={faFolderOpen} />
-                </h3>
-                <p>As a young full stack web developer ready for any and every oppourtunuity that comes my way. I have experience using various coding/programming languages and software such as HTML, CSS, Tailwindcss, Javascript, Typescript, React, Java, PHP, Python, MySql, PostgreSql, Ruby on Rails and Nodejs. I completed a 2 year course at Red River College in 2026. </p>
-            </div>
-            <div className="iconsdiv">
-                <div className="social-icons">
-                    <a href="https://www.linkedin.com/in/olando-mcdonald-9bb708345/" target="_blank">
-                        <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                    <a href="https://github.com/Olando07" target="_blank">
-                        <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                    <a href="https://www.instagram.com/lando_077/?next=%2F" target="_blank">
-                        <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                    <a href="https://discordapp.com/users/1187420875662827590" target="_blank">
-                        <FontAwesomeIcon icon={faDiscord} />
+
+            <div className="maindiv">
+                <div className="about-me">
+                    <h3>
+                        Get to know me <FontAwesomeIcon icon={faFolderOpen} />
+                    </h3>
+                    <p>As a young full stack web developer ready for any and every oppourtunuity that comes my way. I have experience using various coding/programming languages and software such as HTML, CSS, Tailwindcss, Javascript, Typescript, React, Java, PHP, Python, MySql, PostgreSql, Ruby on Rails and Nodejs. I completed a 2 year course at Red River College in 2026. </p>
+                </div>
+                <div className="iconsdiv">
+                    <div className="social-icons">
+                        <a href="https://www.linkedin.com/in/olando-mcdonald-9bb708345/" target="_blank">
+                            <FontAwesomeIcon icon={faLinkedin} />
+                        </a>
+                        <a href="https://github.com/Olando07" target="_blank">
+                            <FontAwesomeIcon icon={faGithub} />
+                        </a>
+                        <a href="https://www.instagram.com/lando_077/?next=%2F" target="_blank">
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                        <a href="https://discordapp.com/users/1187420875662827590" target="_blank">
+                            <FontAwesomeIcon icon={faDiscord} />
+                        </a>
+                    </div>
+                    <a href="#" className="btn">
+                        Hire me
                     </a>
                 </div>
-                <a href="#" className="btn">
-                    Hire me
-                </a>
             </div>
         </div>
     );
