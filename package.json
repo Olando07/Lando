@@ -1,6 +1,6 @@
 {
     "name": "shadcn-project",
-    "home": "https://Olando07.github.io/Lando/",
+    "homepage": "https://Olando07.github.io/Lando/",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -10,8 +10,7 @@
         "lint": "eslint .",
         "preview": "vite preview",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist",
-        "test": "react-scripts test"
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.7.2",

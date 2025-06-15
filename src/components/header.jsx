@@ -2,9 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { AvatarDemo } from "./avatar";
-import { Link } from "react-router";
 import "../css/nav.css";
 
 function Header() {
@@ -23,7 +21,6 @@ function Header() {
     }, [theme]);
 
     /* active tab setup */
-    // const { pathname } = useLocation();
     const links = [
         { to: "/Lando/", label: "Home" },
         { to: "/Lando/Projects", label: "Projects" },

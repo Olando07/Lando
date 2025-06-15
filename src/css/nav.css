@@ -56,7 +56,7 @@ body {
 }
 
 .header {
-    margin: 40px auto;
+    margin: 60px auto;
     padding: 10px;
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -111,8 +111,7 @@ body {
 
 /* name and occupation styles */
 .hero span {
-    color: var(--span-blue);
-    font-size: 26px;
+
 }
 /* end of name and occupation styles */
 
@@ -190,6 +189,10 @@ body {
 /* end of glowing colors */
 
 /* Light Mode */
+body.light {
+    background-color: #e3e3e3;
+}
+
 body.light .nav-links a:hover {
     background: var(--black);
     color: var(--white);
@@ -213,12 +216,16 @@ body.light .btn:hover {
 }
 
 body.light .btn {
-    color: var(--white);
+    color: var(--black);
     border-color: var(--third-blue);
 }
 /* end of light */
 
 /* Dark Mode */
+body.dark {
+    background-color: #1d1d1d;
+}
+
 body.dark .header {
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid var(--black);
@@ -243,7 +250,7 @@ body.dark .social-icons a {
 
 body.dark .hero span,
 body.dark .typing-text .cursor {
-    color: var(--fourth-blue);
+    color: var(--white);
 }
 
 body.dark .color1 {

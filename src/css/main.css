@@ -27,18 +27,22 @@ body {
     overflow: hidden;
 }
 
+p {
+    font-size: 17px;
+}
+
 /* Social Icons */
 .social-icons a {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
     background-color: transparent;
     width: 1.8rem;
     height: 1.8rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem 1.3rem 3rem 0;
-    padding: 18px;
+    margin: 3rem 2rem 3rem 0;
+    padding: 22px;
     border: 0.15rem solid var(--second-blue);
     border-radius: 50%;
     transition: 0.3s ease;
@@ -55,7 +59,6 @@ body {
 
 /* Button */
 .btn {
-    color: var(--white);
     background-color: transparent;
     font-size: 1rem;
     font-weight: 700;
@@ -67,7 +70,7 @@ body {
     transition: 0.3s ease;
     cursor: pointer;
     position: relative;
-    top: -25px;
+    top: -10px;
 }
 
 .btn:hover {
@@ -86,10 +89,6 @@ body {
     padding: 0 190px;
 }
 
-.hero span {
-    color: var(--fourth-blue);
-}
-
 .hero .iconsdiv,
 .loading {
     text-align: center;
@@ -99,7 +98,7 @@ body {
     width: auto;
     float: left;
     height: 50%;
-    top: 60px;
+    top: 22%;
     left: 30px;
     position: relative;
     /* overflow-y: hidden; */
@@ -115,7 +114,7 @@ body {
     width: 620px;
     height: 400px;
     position: absolute;
-    top: 190px;
+    top: 30%;
     border-radius: 12px;
     padding: 20px 30px;
     margin: 20px;
@@ -164,9 +163,9 @@ body {
 }
 /* end of loading message */
 
-.hero .heading span {
-    font-size: 32px;
-}
+/* .hero .heading span {
+   
+} */
 
 .heading,
 .typing-text {
@@ -176,6 +175,7 @@ body {
 
 .typing-text .cursor {
     position: relative;
+    top: 3px;
 }
 
 .typing-text .cursor::after {
@@ -183,21 +183,20 @@ body {
     display: inline-block;
     margin-left: 12px;
     width: 3px;
-    height: 1.3em;
+    height: 1.2em;
     animation: heroCursor 0.7s steps(1) infinite;
-    background-color: var(--span-blue);
 }
 /* end of heading div */
 
 /* start of main div */
 .hero .maindiv {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 50px 100px;
 }
 
 body.light .hero .maindiv {
-    background-color: rgba(0, 0, 0, 0.75);
-    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--black);
 }
 
 .hero .about-me h3 {
@@ -206,16 +205,39 @@ body.light .hero .maindiv {
     margin-bottom: 24px;
 }
 
-.hero .about-me p {
-    font-size: 17px;
+.hero .languages {
+    margin: 80px 0;
+}
+
+.hero .languages .language-header {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.hero .languages .language-icons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+    padding: 0 150px;
+    text-align: center;
+    flex-wrap: wrap;
 }
 /* end of main div */
+
+/* start of projects page */
+.project-demo img {
+    width: 380px;
+    height: 210px;
+}
+
+/* end of projects page */
 
 /* Animations */
 @keyframes heroCursor {
     0%,
     49% {
-        background-color: var(--span-blue);
+        background-color: #2ac981;
     }
     50%,
     100% {

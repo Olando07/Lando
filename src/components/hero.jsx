@@ -7,6 +7,20 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
+import html from '../images/icons8-html-48.png';
+import css from '../images/icons8-css-48.png';
+import js from '../images/icons8-js-48.png';
+import react from '../images/icons8-react-48.png';
+import java from '../images/icons8-java-48.png';
+import python from '../images/icons8-python-48.png';
+import node from '../images/icons8-nodejs-48.png';
+import git from '../images/icons8-git-48.png';
+import mysql from '../images/icons8-mysql-48.png';
+import postgre from '../images/icons8-postgresql-48.png';
+import ruby from '../images/icons8-ruby-on-rails-48.png';
+import php from '../images/icons8-php-48.png';
+import tailwind from '../images/icons8-tailwindcss-48.png';
+import ts from "../images/icons8-typescript-48.png";
 
 function Hero() {
     const code = `function loadExperience {\n   const frontend = [HTML, CSS , JavaScript, TypeScript React];\n   const backend = [Java, PostgreSql, nodeJS, Python, MySql, PHP];\n   let otherskills = [];\n   let passion = "A love for tech being knowledgeable in IT";\n   return {\n      developer: "Olando";\n      role: "Full Stack Web Developer"; \n      connect() => 'Let's build something';  \n   }; \n}`;
@@ -49,7 +63,70 @@ function Hero() {
                     <h3>
                         Get to know me <FontAwesomeIcon icon={faFolderOpen} />
                     </h3>
-                    <p>As a young full stack web developer ready for any and every oppourtunuity that comes my way. I have experience using various coding/programming languages and software such as HTML, CSS, Tailwindcss, Javascript, Typescript, React, Java, PHP, Python, MySql, PostgreSql, Ruby on Rails and Nodejs. I completed a 2 year course at Red River College in 2026. </p>
+                    <p>I am a somewaht generic person as I like a variety of things like cars, food, sports, games, music, and technology. As a young full stack web developer ready for any and every oppourtunuity that comes my way. I have experience using various coding/programming languages and software which makes me a viable candidate in the web development industry. I completed a 2 year course at Red River College in the year 2026. </p>
+                </div>
+                <div className="languages">
+                    <div className="language-header">
+                        <p>Below are the various programming languages and software i have experience using.</p>
+                    </div>
+                    <div className="language-icons">
+                        <p>
+                            HTML5
+                            <img src={html} alt="html" />
+                        </p>
+                        <p>
+                            CSS
+                            <img src={css} alt="css" />
+                        </p>
+                        <p>
+                            Javascript
+                            <img src={js} alt="javascript" />
+                        </p>
+                        <p>
+                            React
+                            <img src={ react} alt="react" />
+                        </p>
+                        <p>
+                            Java
+                            <img src={java} alt="java" />
+                        </p>
+                        <p>
+                            Python
+                            <img src={python} alt="python" />
+                        </p>
+                        <p>
+                            Nodejs
+                            <img src={node} alt="nodejs" />
+                        </p>
+                        <p>
+                            Git
+                            <img src={git} alt="git" />
+                        </p>
+                        <p>
+                            MySql
+                            <img src={mysql} alt="mysql" />
+                        </p>
+                        <p>
+                            Postgresql
+                            <img src={ postgre} alt="postgresql" />
+                        </p>
+                        <p>
+                            Ruby on Rails
+                            <img src={ruby} alt="Ruby on Rails" />
+                        </p>
+                        <p>
+                            PHP
+                            <img src={php} alt="PHP" />
+                        </p>
+                        <p>
+                            Tailwindcss
+                            <img src={tailwind} alt="Tailwindcss" />
+                        </p>
+                        <p>
+                            Typescript
+                            <img src={ts} alt="Typescript" />
+                        </p>
+                    </div>
                 </div>
                 <div className="iconsdiv">
                     <div className="social-icons">
