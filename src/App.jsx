@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
 import "./css/main.css";
 import { Routes, Route } from "react-router";
-import Header from "./components/Header"; 
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import ContactMe from "./components/Contact-me";
+import Header from "./pages/Header"; 
+import Footer from "./pages/Footer";
+import Hero from "./pages/Hero";
+import Projects from "./pages/Projects";
+import ContactMe from "./pages/Contact-me";
 
 function App() {
     return (

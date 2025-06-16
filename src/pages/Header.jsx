@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
-import { AvatarDemo } from "./avatar";
+import { AvatarDemo } from "../components/avatar";
 import "../css/nav.css";
 
 function Header() {
