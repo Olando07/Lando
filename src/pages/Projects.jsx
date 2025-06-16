@@ -1,8 +1,9 @@
 import React from "react";
 import "../css/main.css";
+import studentGuide from "../images/Student-guide.png";
+import exoticCentral from "../images/Exotic-Central.png";
 
 function Projects() {
-    const [studentGuide, exoticCentral] = ["src/images/Student-guide.png", "src/images/Exotic-Central.png"];
 
     return (
         <div className="projects">
