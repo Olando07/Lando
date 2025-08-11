@@ -6,6 +6,7 @@ function ContactMe() {
         <div className="contact">
             <div className="headingdiv">
                 <h1>Contact Me</h1>
+                {/* Create contact form that sends an email */}
             </div>
         </div>
     );
