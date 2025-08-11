@@ -6,6 +6,8 @@ import exoticCentral from "../images/Exotic-Central.png";
 import exoticCentralThumbNail from "../images/Exotic-Central_resize.png";
 import todoList from "../images/ToDo-List.png";
 import todoListThumbNail from "../images/ToDo-List_resize.png";
+import pokemon from "../images/pokemon.png";
+import pokemonThumbNail from "../images/pokemon_resize.png";
 
 
 function Projects() {
@@ -56,11 +58,16 @@ function Projects() {
 						Click here to visit the site →
 					</a>
 				</div>
-			</div>
+				<div className="site-div">
+					<img src={pokemonThumbNail} alt="Pokemon app" onClick={() => openLightbox(pokemon, "Pokemon")} />
+					<a className="site-link" href="https://olando07.github.io/Pokemon_app8/" target="_blank">
+						Click here to visit the site →
+					</a>
+                </div>
+            {/* fix page icon for todolist and student guide */}
 			{/* Put a photo of each project first then add maybe a short description and link or make the pictue the link */}
-			{/* add the web dev 1 project 4 */}
 			{/* host and add the react movie project */}
-			{/* add the comms project but remove the names first */}
+			</div>
 
 			{selectedImage && (
 				<div className="lightbox-overlay" onClick={handleOverlayClick} onKeyDown={handleKeyDown} tabIndex={0}>

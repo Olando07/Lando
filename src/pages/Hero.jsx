@@ -23,7 +23,7 @@ import tailwind from '../images/icons8-tailwindcss-48.png';
 import ts from "../images/icons8-typescript-48.png";
 
 function Hero() {
-    const code = `function loadExperience {\n   const frontend = [HTML, CSS , JavaScript, TypeScript React];\n   const backend = [Java, PostgreSql, nodeJS, Python, MySql, PHP];\n   let otherskills = [];\n   let passion = "A love for tech being knowledgeable in IT";\n   return {\n      developer: "Olando";\n      role: "Full Stack Web Developer"; \n      connect() => 'Let's build something';  \n   }; \n}`;
+    const code = `function loadExperience {\n   const frontend = [HTML, CSS, JavaScript, TypeScript, React];\n   const backend = [Java, PostgreSql, nodeJS, Python, MySql, PHP];\n   let otherskills = [];\n   let passion = "A love for tech and being knowledgeable in it";\n   return {\n      developer: "Olando";\n      role: "Full Stack Web Developer"; \n      connect() => 'Let's build something';  \n   }; \n}`;
     const roles = ["Web developer", "Software developer", "Frontend developer", "Backend developer", "Fullstack developer"];
 
     const [index, setIndex] = useState(0);
