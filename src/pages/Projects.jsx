@@ -45,7 +45,7 @@ function Projects() {
 					</a>
 				</div>
 				<div className="site-div">
-					<img src={exoticCentralThumbNail} alt="Exotic Central" onClick={() => openLightbox(exoticCentral, "Exotic Central")} />
+					<img src={exoticCentralThumbNail} alt="RRC Student Guide" onClick={() => openLightbox(exoticCentral, "Exotic Central")} />
 					<a className="site-link" href="https://olando07.github.io/Olando_McDonald_P4/" target="_blank">
 						Click here to visit the site →
 					</a>
