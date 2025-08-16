@@ -36,9 +36,13 @@ function Projects() {
     return (
 		<div className="projects">
 			<div className="headingdiv">
-				<h1>Projects</h1>
+				<h1>My Projects</h1>
 			</div>
-			<div>Welcome to my projects page. Here you will be able to see and visit some of the projects that I have worked on.</div>
+			<div>
+				<p>
+					Welcome to my projects page. Here you will be able to see and visit some of the projects that I have worked on.
+				</p>
+			</div>
 			<div className="project-demo">
 				<div className="site-div">
 					<img src={studentGuideThumbNail} alt="RRC Student Guide" onClick={() => openLightbox(studentGuide, "RRC Student Guide")} />
@@ -64,8 +68,6 @@ function Projects() {
 						Click here to visit the site →
 					</a>
                 </div>
-            {/* fix page icon for todolist and student guide */}
-			{/* Put a photo of each project first then add maybe a short description and link or make the pictue the link */}
 			{/* host and add the react movie project */}
 			</div>
 

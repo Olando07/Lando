@@ -29,8 +29,8 @@ body {
     overflow: hidden;
 }
 
-p {
-    font-size: 17px;
+p, .contact form legend {
+    font-size: 18px;
 }
 
 .route-container {
@@ -206,14 +206,19 @@ body.light .hero .maindiv {
     color: var(--black);
 }
 
+.hero .about-me {
+    padding: 0 20px;
+    text-indent: 20px;
+}
+
 .hero .about-me h3 {
     font-size: 22px;
     text-align: center;
-    margin-bottom: 24px;
+    margin: 30px 0 28px;
 }
 
 .hero .languages {
-    margin: 50px 0;
+    margin: 50px 0 50px;
 }
 
 .hero .languages .language-header {
@@ -230,9 +235,28 @@ body.light .hero .maindiv {
     text-align: center;
     flex-wrap: wrap;
 }
+
+.hero .languages .language-icons p {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero .languages .language-icons p img {
+    max-width: 48px;
+    max-height: 48px;
+}
 /* end of main div */
 
 /* start of projects page */
+.projects .headingdiv, .contact .headingdiv {
+    font-size: 20px;    
+    display: flex;
+    justify-content: center;
+    margin: 0 0 30px;
+}
+
 .project-demo img {
     width: 380px;
     height: 210px;
@@ -311,6 +335,56 @@ body.light .hero .maindiv {
 }
 /* End of Full Image view*/
 /* end of projects page */
+
+/* Start of contacts page */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form legend {
+    margin-bottom: 20px;
+}
+
+form fieldset ol {
+    margin: 0 60px;
+}
+
+form fieldset ol li label {
+    width: 100%;
+} 
+
+form fieldset ol li {
+    margin: 10px 0;
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+form fieldset ol li input, 
+.auto-expand {
+    background-color: #fff;
+    color: #000;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    margin-top: 10px;
+}
+
+.auto-expand {
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+.auto-expand:focus {
+  outline: none;
+  border-color: #4c93af;
+}
+/* End of contacts page */
 
 /* Animations */
 @keyframes heroCursor {
