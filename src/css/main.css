@@ -104,10 +104,9 @@ p, .contact form legend {
     width: auto;
     float: left;
     height: 50%;
-    top: 22%;
+    top: 8%;
     left: 30px;
     position: relative;
-    /* overflow-y: hidden; */
 }
 
 /* start of experience code block */
@@ -169,10 +168,6 @@ p, .contact form legend {
     font-family: "Roboto", sans-serif;
 }
 /* end of loading message */
-
-/* .hero .heading span {
-   
-} */
 
 .heading,
 .typing-text {
@@ -263,7 +258,7 @@ body.light .hero .maindiv {
 }
 
 .project-demo .site-div {
-    margin: 30px 0 30px 100px;
+    margin: 50px 0 50px 100px;
     display: flex;
     padding: 20px 0;
 }

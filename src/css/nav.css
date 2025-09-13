@@ -110,9 +110,9 @@ body {
 /* end of nav styles */
 
 /* name and occupation styles */
-.hero span {
+/* .hero span {
 
-}
+} */
 /* end of name and occupation styles */
 
 /* avatar */
@@ -342,6 +342,7 @@ body.dark .bar {
         display: flex;
         justify-content: center;
         align-content: center;
+        height: 101vh;
     }
 
     body.dark .nav-links .nav.active {
@@ -386,56 +387,84 @@ body.dark .bar {
         gap: 70px;
         display: flex;
         align-items: center;
-        margin: 10px auto;
+        margin: 50px 20px 10px;
         max-width: 400px;
         border: 1px solid rgba(136, 136, 136, 0.6);
         background: rgba(136, 136, 136, 0.6);
     }
     /* end of nav styles */
 
+    /* start of main page styles and general */
     .hero .headingdiv,
     .hero .experience-div {
         overflow: hidden;
     }
 
+    .hero .headingdiv .welcome{
+        position: relative;
+        top: 55px;
+    }
+
     .hero .headingdiv {
+        padding: 40px 0;
+        margin: 0;
+        height: 340px;
+    }
+
+    .hero .experience-div, .experience {
+        display: none;
+    }
+
+    .hero .maindiv {
+        padding: 10px 20px;
+    }
+
+    .hero .languages {
+        margin: 10px 0;
+    }
+    
+    .hero .languages .language-icons {
+        padding: 0 20px;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .route-container {
         padding: 0;
-        margin: 20px 0;
-        height: 710px;
+    }
+    /* end of main page styles and general */
+
+    /* start of projects page styles and general */
+    .route-container .projects {
+        padding: 60px 20px;
+    }
+    
+    .route-container .projects .project-demo .site-div {
+        margin: 30px 0;
+        flex-direction: column;
     }
 
-    .hero .experience-div {
-        position: relative;
-        left: -5px;
-        top: -100px;
-        width: 430px;
-        height: 500px;
-        display: flex;
+    .route-container .projects .project-demo .site-div a {
+        margin: 30px 0;
+        place-self: center;
+    }
+    /* end of projects page styles and general */
+    
+    /* start of contacts page styles and general */
+    .route-container .contact {
+        padding: 50px 20px 0;
     }
 
-    .hero .experience-div .experience {
-        position: static;
-        overflow-y: hidden;
-        overflow-x: scroll;
-        width: 450px;
-        height: 400px;
-        box-shadow: none;
-        left: -200px;
+    form fieldset ol {
+        margin: 0 10px;
     }
-
-    .hero .experience-div .experience .experience-subdiv {
-        width: 600px;
-        position: relative;
-        left: -14px;
+    
+    form fieldset ol li label {
+        font-size: 20px;
     }
-
-    .hero .experience-div .experience .experience-subdiv code {
-        font-family: monospace;
-        font-size: 1rem;
-        white-space: pre-wrap;
-        overflow-x: auto;
-        display: block;
-    }
+    /* end of contacts page styles and general */
 
     .mobile-tab {
         display: flex;
@@ -461,32 +490,4 @@ body.dark .bar {
         background-color: rgba(255, 255, 255, 0.745);
         color: var(--black);
     }
-
-    .hero .maindiv {
-        padding: 50px 30px;
-    }
-
-    /* .header .nav-links ul, .footer .nav-links ul, .iconsdiv {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-    }
-
-    .header .nav-links ul li, .footer .nav-links ul li{
-        background-color: #555;
-    }
-
-    .header .nav-links {
-        width: 100%;
-        background-color: #777;
-    }
-
-    .header .nav-links ul li a {
-        font-size: 22px;
-        width: 100%;
-    } */
 }

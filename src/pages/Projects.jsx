@@ -9,11 +9,10 @@ import todoListThumbNail from "../images/ToDo-List_resize.png";
 import pokemon from "../images/pokemon.png";
 import pokemonThumbNail from "../images/pokemon_resize.png";
 
-
 function Projects() {
-    const [selectedImage, setSelectedImage] = useState(null);
+	const [selectedImage, setSelectedImage] = useState(null);
 
-    const openLightbox = (imageSrc, imageAlt = "") => {
+	const openLightbox = (imageSrc, imageAlt = "") => {
 		setSelectedImage({ src: imageSrc, alt: imageAlt });
 	};
 
@@ -33,42 +32,52 @@ function Projects() {
 		}
 	};
 
-    return (
+	return (
 		<div className="projects">
 			<div className="headingdiv">
 				<h1>My Projects</h1>
 			</div>
-			<div>
-				<p>
-					Welcome to my projects page. Here you will be able to see and visit some of the projects that I have worked on.
-				</p>
+			<div className="flex justify-center">
+				<p>Welcome to my projects page. Here you can view and visit some of the projects that I created.</p>
 			</div>
 			<div className="project-demo">
 				<div className="site-div">
 					<img src={studentGuideThumbNail} alt="RRC Student Guide" onClick={() => openLightbox(studentGuide, "RRC Student Guide")} />
 					<a className="site-link" href="https://olando07.github.io/New-Student-Guide/" target="_blank">
-						Click here to visit the site →
+						Click here to demo the site
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 ml-1">
+							<path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+						</svg>
 					</a>
 				</div>
 				<div className="site-div">
 					<img src={exoticCentralThumbNail} alt="RRC Student Guide" onClick={() => openLightbox(exoticCentral, "Exotic Central")} />
 					<a className="site-link" href="https://olando07.github.io/Olando_McDonald_P4/" target="_blank">
-						Click here to visit the site →
+						Click here to demo the site
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 ml-1">
+							<path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+						</svg>
 					</a>
 				</div>
 				<div className="site-div">
 					<img src={todoListThumbNail} alt="To Do List" onClick={() => openLightbox(todoList, "To Do List")} />
 					<a className="site-link" href="https://olando07.github.io/To-do-list/" target="_blank">
-						Click here to visit the site →
+						Click here to demo the site
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 ml-1">
+							<path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+						</svg>
 					</a>
 				</div>
 				<div className="site-div">
 					<img src={pokemonThumbNail} alt="Pokemon app" onClick={() => openLightbox(pokemon, "Pokemon")} />
 					<a className="site-link" href="https://olando07.github.io/Pokemon_app8/" target="_blank">
-						Click here to visit the site →
+						Click here to demo the site
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 ml-1">
+							<path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+						</svg>
 					</a>
-                </div>
-			{/* host and add the react movie project */}
+				</div>
+				{/* host and add the react movie project */}
 			</div>
 
 			{selectedImage && (

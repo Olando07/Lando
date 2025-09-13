@@ -63,11 +63,14 @@ function Hero() {
 					<h3>
 						Get to know me <FontAwesomeIcon icon={faFolderOpen} />
 					</h3>
-					<p>I am a somewhat generic person as I like a variety of things like cars, food, sports, games, music, and technology. As a young full stack web developer ready for any and every oppourtunuity that comes my way. I have experience using various programming languages and software which makes me a viable candidate in the web development industry. I completed a 2 year course at Red River College in the year 2026.</p>
+					<p>
+						I am a passionate full stack web developer with a diverse range of interests including technology, cooking, sports (mostly soccer), gaming, music and cars. Currently, I am pursuing a diploma in web development at Red River College (graduating May 2026). Through this program, I have gained experience using multiple programming languages, frameworks and development software. My technical abilities, love for problem solving, interest in expanding my knowledge and
+						collaborative working style make me suited to work well with teams or by myself on various projects. I am actively seeking opportunities to develop and utilize my skills in real world environments and would love to join your team.{" "}
+					</p>
 				</div>
 				<div className="languages">
 					<div className="language-header">
-						<p>Below are the various programming languages and software i have experience using:</p>
+						<p>Below are some of the programming languages, frameworks and software i have experience using:</p>
 					</div>
 					<div className="language-icons">
 						<p>
