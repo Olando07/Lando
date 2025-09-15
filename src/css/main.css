@@ -363,7 +363,7 @@ form fieldset ol li input,
     background-color: #fff;
     color: #000;
     padding: 8px;
-    border: 2px solid #ddd;
+    border: 3px solid #ddd;
     border-radius: 6px;
     font-size: 16px;
     font-family: inherit;
@@ -377,7 +377,7 @@ form fieldset ol li input,
 
 .auto-expand:focus {
   outline: none;
-  border-color: #4c93af;
+  border-color: #5ea9c6;
 }
 /* End of contacts page */
 
