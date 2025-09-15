@@ -279,11 +279,11 @@ body.dark .bar {
         margin: 0;
     }
     
-    body {
+    body, body.dark {
         overflow-x: none;
         overflow-x: hidden;
     }
-
+    
     .color1 {
         left: 10px;
         top: 80px;
@@ -307,9 +307,10 @@ body.dark .bar {
         width: 500px;
         overflow: hidden;
     }
-
+    
     .hero {
         padding: 0;
+        overflow: hidden;
     }
 
     /* nav styles */
