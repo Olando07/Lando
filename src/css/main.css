@@ -25,9 +25,9 @@
     overflow-x: hidden;
 }
 
-body {
+/* body {
     overflow: hidden;
-}
+} */
 
 p, .contact form legend {
     font-size: 18px;
