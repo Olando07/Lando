@@ -279,33 +279,16 @@ body.dark .bar {
         margin: 0;
     }
     
-    body, body.dark {
-        overflow-x: none;
-        overflow-x: hidden;
+    .color1 {
+        display: none;
     }
     
-    .color1 {
-        left: 10px;
-        top: 80px;
-        height: 800px;
-        width: 300px;
-        overflow: hidden;
-    }
-
     .color2 {
-        left: 10px;
-        top: 80px;
-        height: 800px;
-        width: 300px;
-        overflow: hidden;
+        display: none;
     }
-
+    
     .color3 {
-        left: 10px;
-        top: 480px;
-        height: 800px;
-        width: 300px;
-        overflow: hidden;
+        display: none;
     }
     
     .hero {
