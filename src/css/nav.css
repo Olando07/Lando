@@ -273,7 +273,7 @@ body.dark .bar {
 /* smaller screen styles */
 @media (max-width: 768px) {
     * {
-        overflow: hidden;
+        overflow-x: none;
         padding: 0;
         margin: 0;
     }
