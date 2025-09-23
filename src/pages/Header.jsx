@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 import { AvatarDemo } from "../components/avatar";
 import "../css/nav.css";
+import { Link } from "react-router-dom";
 
 function Header() {
     const [active, setActive] = useState("false");
     /* dark mode / light mode setup */
     const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-    let modeToolTip = theme === "light" ? "Switch to dark mode" : "Switch to light mode";
+    // let modeToolTip = theme === "light" ? "Switch to dark mode" : "Switch to light mode";
 
     const toggleTheme = () => {
         setTheme(theme === "light" ? "dark" : "light");
@@ -35,9 +36,9 @@ function Header() {
                         <ul className="nav-ul flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
                             {links.map(({ to, label }) => (
                                 <li key={to}>
-                                    <a className="w-full h-full" href={to}>
+                                    <Link className="w-full h-full" to={to}>
                                         {label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/nav.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
     /* active tab setup */
@@ -18,9 +19,9 @@ function Footer() {
                         <ul className="nav-ul flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
                             {links.map(({ to, label }) => (
                                 <li key={to}>
-                                    <a className="w-full h-full" href={to}>
+                                    <Link className="w-full h-full" to={to}>
                                         {label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

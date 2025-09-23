@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import "./css/main.css";
-import { Routes, Route } from "react-router";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Header from "./pages/Header";
 import Footer from "./pages/Footer";
 import Hero from "./pages/Hero";
@@ -12,13 +12,13 @@ function App() {
 		<>
 			<Header />
 			<div className="route-container">
-				<Suspense fallback={<div className="loading">Loading...</div>}>
-					<Routes basename="/Lando">
-						<Route path="Lando/" element={<Hero />} />
-						<Route path="Lando/Projects" element={<Projects />} />
-						<Route path="Lando/Contact" element={<ContactMe />} />
-					</Routes>
-				</Suspense>
+				{/* <Suspense fallback={<div className="loading">Loading...</div>}> */}
+				<Routes basename="/Lando">
+					<Route path="Lando/" element={<Hero />} />
+					<Route path="Lando/Projects" element={<Projects />} />
+					<Route path="Lando/Contact" element={<ContactMe />} />
+				</Routes>
+				{/* </Suspense> */}
 			</div>
 			<Footer />
 			<div className="color1"></div>
