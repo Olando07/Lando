@@ -35,11 +35,11 @@ function Projects() {
 	};
 
 	const projects = [
+		{ name: "Fintech app", pic: fintech, thunmbnailpic: fintechThumbNail, url: "https://olando07.github.io/fintech-app/#/" },
+		{ name: "Pokemon app", pic: pokemon, thunmbnailpic: pokemonThumbNail, url: "https://olando07.github.io/Pokemon_app8/" },
+		{ name: "To Do List", pic: todoList, thunmbnailpic: todoListThumbNail, url: "https://olando07.github.io/To-do-list/" },
 		{ name: "RRC Student Guide", pic: studentGuide, thunmbnailpic: studentGuideThumbNail, url: "https://olando07.github.io/New-Student-Guide/" },
 		{ name: "Exotic Central", pic: exoticCentral, thunmbnailpic: exoticCentralThumbNail, url: "https://olando07.github.io/Olando_McDonald_P4/" },
-		{ name: "To Do List", pic: todoList, thunmbnailpic: todoListThumbNail, url: "https://olando07.github.io/To-do-list/" },
-		{ name: "Pokemon app", pic: pokemon, thunmbnailpic: pokemonThumbNail, url: "https://olando07.github.io/Pokemon_app8/" },
-		{ name: "Fintech app", pic: fintech, thunmbnailpic: fintechThumbNail, url: "https://olando07.github.io/fintech-app/#/" },
 	];
 
 	return (
