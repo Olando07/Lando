@@ -172,7 +172,7 @@ function ContactMe() {
 						</li>
 					</ol>
 				</fieldset>
-				<input type="submit" value="Send Email" className="px-4.5 py-2 mt-6 bg-sky-500 hover:bg-sky-800 text-lg rounded-md" />
+				<input type="submit" value="Send Email" className="px-4.5 py-2 mt-6 bg-sky-500 hover:bg-sky-600 text-lg rounded-md form-btn" />
 			</form>
 		</div>
 	);
