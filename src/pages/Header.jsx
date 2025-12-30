@@ -30,7 +30,7 @@ function Header() {
 
     return (
         <>
-            <header className="header">
+            <header className="header glass">
                 <div className="nav-links">
                     <nav className={!active ? "nav active" : "nav"}>
                         <ul className="nav-ul flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
