@@ -88,7 +88,7 @@ function ContactMe() {
 				},
 				(error) => {
 					console.log("FAILED...", error.text);
-				}
+				},
 			);
 	};
 
@@ -137,7 +137,7 @@ function ContactMe() {
 	}, []);
 
 	return (
-		<div className="contact">
+		<div className="contact" id="contact">
 			<div className="headingdiv">
 				<h1>Contact Me</h1>
 			</div>

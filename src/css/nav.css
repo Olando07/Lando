@@ -40,7 +40,9 @@ body {
 	overflow-x: hidden;
 	/* position: relative; */
 	font-family: "Comfortaa", sans-serif;
-	transition: background-color 0.5s ease, color 0.5s ease;
+	transition:
+		background-color 0.5s ease,
+		color 0.5s ease;
 }
 
 /* ====================== GLOWING BACKGROUND BLOBS ====================== */
@@ -61,7 +63,9 @@ body {
 	border-radius: 50%;
 	filter: blur(90px);
 	opacity: 0.55;
-	animation: morph 18s ease-in-out infinite alternate, float 32s ease-in-out infinite;
+	animation:
+		morph 18s ease-in-out infinite alternate,
+		float 32s ease-in-out infinite;
 	will-change: transform, border-radius;
 }
 
@@ -71,7 +75,10 @@ body {
 	left: 4%;
 	top: -14%;
 	background: radial-gradient(ellipse at 40% 60%, #498bce 0%, #61adf9 50%, transparent 78%);
-	animation: morph 34s ease-in-out infinite alternate, float 28s ease-in-out infinite, rotate 120s linear infinite;
+	animation:
+		morph 34s ease-in-out infinite alternate,
+		float 28s ease-in-out infinite,
+		rotate 120s linear infinite;
 	animation-duration: 32s, 19s;
 	animation-delay: 0s, 2s;
 }
@@ -82,9 +89,14 @@ body {
 	left: 62%;
 	top: -5%;
 	background: radial-gradient(circle at 60% 50%, var(--second-blue) 15%, #3b82f6 55%, transparent 85%);
-	animation: morph 22s ease-in-out infinite alternate, float 26s ease-in-out infinite, rotate 90s linear infinite;
+	animation:
+		morph 22s ease-in-out infinite alternate,
+		float 26s ease-in-out infinite,
+		rotate 90s linear infinite;
 	animation-duration: 26s, 22s;
-	animation-delay: 4s, -3s;
+	animation-delay:
+		4s,
+		-3s;
 }
 
 .color3 {
@@ -93,7 +105,10 @@ body {
 	top: 14%;
 	left: 27%;
 	background: radial-gradient(ellipse at 50% 40%, var(--teal) 10%, #0ea5e9 50%, transparent 80%);
-	animation: morph 21s ease-in-out infinite alternate, float 28s ease-in-out infinite, rotate 110s linear infinite;
+	animation:
+		morph 21s ease-in-out infinite alternate,
+		float 28s ease-in-out infinite,
+		rotate 110s linear infinite;
 	animation-duration: 38s, 15s;
 	animation-delay: 8s, 0s;
 }
@@ -104,7 +119,10 @@ body {
 	left: -4%;
 	top: 55%;
 	background: radial-gradient(ellipse at 50% 50%, #ff7b00 0%, #ffb14e 45%, transparent 78%);
-	animation: morph 30s ease-in-out infinite alternate, float 32s ease-in-out infinite, rotate 140s linear infinite;
+	animation:
+		morph 30s ease-in-out infinite alternate,
+		float 32s ease-in-out infinite,
+		rotate 140s linear infinite;
 	animation-duration: 28s, 20s;
 	animation-delay: 5s, 1s;
 }
@@ -115,9 +133,14 @@ body {
 	left: 60%;
 	top: 57%;
 	background: radial-gradient(circle at 60% 60%, #9b4dff 0%, #c084fc 45%, transparent 80%);
-	animation: morph 24s ease-in-out infinite alternate, float 30s ease-in-out infinite, rotate 100s linear infinite;
+	animation:
+		morph 24s ease-in-out infinite alternate,
+		float 30s ease-in-out infinite,
+		rotate 100s linear infinite;
 	animation-duration: 30s, 24s;
-	animation-delay: 10s, -5s;
+	animation-delay:
+		10s,
+		-5s;
 }
 
 @keyframes float {
@@ -256,7 +279,9 @@ body.dark .footer {
 }
 
 .header div a,
-.footer div a {
+.footer div a,
+.header div button,
+.footer div button {
 	font-family: "Lexend", sans-serif;
 	font-size: 19px;
 	transition: var(--transition);
@@ -267,11 +292,14 @@ body.dark .footer {
 }
 
 .header .nav-links a,
-.footer .nav-links a {
+.footer .nav-links a,
+.header .nav-links button,
+.footer .nav-links button {
 	border-radius: 6px;
 }
 
-.footer div a {
+.footer div a,
+.footer div button {
 	font-size: 16px;
 }
 
@@ -289,16 +317,26 @@ body.dark .footer {
 	padding: 10px 0;
 }
 
-.nav-links .nav ul li a {
+.nav-links .nav ul li a,
+.nav-links .nav ul li button {
 	padding: 8px;
 }
 
-body.light .nav-links a:hover {
+.nav-links .nav ul li button {
+	background: transparent;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+body.light .nav-links a:hover,
+body.light .nav-links button:hover {
 	background: var(--black);
 	color: var(--white);
 }
 
-body.dark .nav-links a:hover {
+body.dark .nav-links a:hover,
+body.dark .nav-links button:hover {
 	background-color: var(--white);
 	color: var(--black);
 }
@@ -558,10 +596,10 @@ body.light .hero .maindiv {
 }
 
 .project-demo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .project-demo img {
@@ -575,13 +613,13 @@ body.light .hero .maindiv {
 	display: flex;
 	align-items: center;
 	padding: 50px 60px;
-    background-color: rgba(0, 0, 0, 0.65);
-    border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.65);
+	border-radius: 8px;
 }
 
 .project-demo .site-div a {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	color: #ff0000;
 	margin-left: 30px;
 	font-size: 19px;
@@ -602,7 +640,7 @@ body.light .hero .maindiv {
 
 .contact form .form-btn {
 	cursor: pointer;
-    padding: 6px 14px;
+	padding: 6px 14px;
 }
 
 .contact form legend {
@@ -760,15 +798,15 @@ form fieldset ol li input,
 		justify-content: center;
 		height: 100vh;
 		position: absolute;
-        opacity: 0.95;
-        width: 190px;
+		opacity: 0.95;
+		width: 190px;
 	}
 
 	body.dark .nav-links .nav.active {
 		background-color: var(--black);
 	}
 
-    .hero {
+	.hero {
 		padding: 0;
 		overflow: hidden;
 	}
@@ -805,23 +843,23 @@ form fieldset ol li input,
 		padding: 0 20px;
 	}
 
-    .route-container .projects .project-demo .site-div {
+	.route-container .projects .project-demo .site-div {
 		margin: 30px 0;
 		flex-direction: column;
 	}
 
-    .route-container .projects .project-demo .site-div a {
+	.route-container .projects .project-demo .site-div a {
 		margin: 30px 0;
 		place-self: center;
 	}
 
-    .route-container .projects {
+	.route-container .projects {
 		padding: 60px 20px;
 	}
 
-    .route-container .contact {
-        padding: 50px 20px 0;
-    }
+	.route-container .contact {
+		padding: 50px 20px 0;
+	}
 
 	.nav ul {
 		flex-direction: column;
@@ -910,5 +948,5 @@ form fieldset ol li input,
 	display: flex;
 	flex-direction: row;
 	gap: 24px;
-    margin-left: 20px;
+	margin-left: 20px;
 }

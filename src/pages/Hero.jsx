@@ -7,36 +7,36 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
-import html from '../images/icons8-html-48.png';
-import css from '../images/icons8-css-48.png';
-import js from '../images/icons8-js-48.png';
-import react from '../images/icons8-react-48.png';
-import java from '../images/icons8-java-48.png';
-import python from '../images/icons8-python-48.png';
-import node from '../images/icons8-nodejs-48.png';
-import git from '../images/icons8-git-48.png';
-import mysql from '../images/icons8-mysql-48.png';
-import postgre from '../images/icons8-postgresql-48.png';
-import ruby from '../images/icons8-ruby-on-rails-48.png';
-import php from '../images/icons8-php-48.png';
-import tailwind from '../images/icons8-tailwindcss-48.png';
+import html from "../images/icons8-html-48.png";
+import css from "../images/icons8-css-48.png";
+import js from "../images/icons8-js-48.png";
+import react from "../images/icons8-react-48.png";
+import java from "../images/icons8-java-48.png";
+import python from "../images/icons8-python-48.png";
+import node from "../images/icons8-nodejs-48.png";
+import git from "../images/icons8-git-48.png";
+import mysql from "../images/icons8-mysql-48.png";
+import postgre from "../images/icons8-postgresql-48.png";
+import ruby from "../images/icons8-ruby-on-rails-48.png";
+import php from "../images/icons8-php-48.png";
+import tailwind from "../images/icons8-tailwindcss-48.png";
 import ts from "../images/icons8-typescript-48.png";
 
 function Hero() {
-    const code = `function loadExperience {\n   const frontend = [HTML, CSS, JavaScript, TypeScript, React];\n   const backend = [Java, PostgreSql, nodeJS, Python, MySql, PHP];\n   let otherskills = [];\n   let passion = "A love for tech and being knowledgeable in it";\n   return {\n      developer: "Olando";\n      role: "Full Stack Web Developer"; \n      connect() => 'Let's build something';  \n   }; \n}`;
-    const roles = ["Web developer", "Software developer", "Frontend developer", "Backend developer", "Fullstack developer"];
+	const code = `function loadExperience {\n   const frontend = [HTML, CSS, JavaScript, TypeScript, React];\n   const backend = [Java, PostgreSql, nodeJS, Python, MySql, PHP];\n   let otherskills = [];\n   let passion = "A love for tech and being knowledgeable in it";\n   return {\n      developer: "Olando";\n      role: "Full Stack Web Developer"; \n      connect() => 'Let's build something';  \n   }; \n}`;
+	const roles = ["Web developer", "Software developer", "Frontend developer", "Backend developer", "Fullstack developer"];
 
-    const [index, setIndex] = useState(0);
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setIndex((prev) => (prev + 1) % roles.length);
-        }, 2000);
+	const [index, setIndex] = useState(0);
+	useEffect(() => {
+		const intervalId = setInterval(() => {
+			setIndex((prev) => (prev + 1) % roles.length);
+		}, 2000);
 
-        return () => clearInterval(intervalId);
-    });
+		return () => clearInterval(intervalId);
+	});
 
-    return (
-		<div className="hero">
+	return (
+		<div className="hero" id="hero">
 			<section className="headingdiv">
 				<div className="welcome">
 					<h1 className="heading">
@@ -133,22 +133,22 @@ function Hero() {
 				</div>
 				<div className="iconsdiv">
 					<div className="social-icons">
-						<a href="https://www.linkedin.com/in/olando-mcdonald-9bb708345/" target="_blank">
+						<a href="https://www.linkedin.com/in/olando-mcdonald-9bb708345/" target="_blank" rel="noreferrer">
 							<FontAwesomeIcon icon={faLinkedin} />
 						</a>
-						<a href="https://github.com/Olando07" target="_blank">
+						<a href="https://github.com/Olando07" target="_blank" rel="noreferrer">
 							<FontAwesomeIcon icon={faGithub} />
 						</a>
-						<a href="https://www.instagram.com/lando_077/?next=%2F" target="_blank">
+						<a href="https://www.instagram.com/lando_077/?next=%2F" target="_blank" rel="noreferrer">
 							<FontAwesomeIcon icon={faInstagram} />
 						</a>
-						<a href="https://discordapp.com/users/1187420875662827590" target="_blank">
+						<a href="https://discordapp.com/users/1187420875662827590" target="_blank" rel="noreferrer">
 							<FontAwesomeIcon icon={faDiscord} />
 						</a>
 					</div>
-					<a href="./Contact" className="btn">
+					<button type="button" className="btn" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
 						Hire me
-					</a>
+					</button>
 				</div>
 			</div>
 		</div>

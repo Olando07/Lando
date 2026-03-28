@@ -43,7 +43,7 @@ function Projects() {
 	];
 
 	return (
-		<div className="projects">
+		<div className="projects" id="projects">
 			<div className="headingdiv">
 				<h1>My Projects</h1>
 			</div>
@@ -52,9 +52,9 @@ function Projects() {
 			</div>
 			<div className="project-demo">
 				{projects.map((project) => (
-					<div className="site-div">
+					<div className="site-div" key={project.url}>
 						<img src={project.thunmbnailpic} alt={project.name} onClick={() => openLightbox(project.pic, project.name)} />
-						<a className="site-link" href={project.url} target="_blank">
+						<a className="site-link" href={project.url} target="_blank" rel="noreferrer">
 							Click here to demo the site
 						</a>
 					</div>
