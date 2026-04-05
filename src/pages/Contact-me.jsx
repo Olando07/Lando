@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../css/main.css";
+import "../css/nav.css";
 import emailjs from "@emailjs/browser";
 
 function ContactMe() {
