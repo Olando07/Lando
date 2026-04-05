@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/main.css";
+import "../css/nav.css";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -25,6 +25,22 @@ import ts from "../images/icons8-typescript-48.png";
 function Hero() {
 	const code = `function loadExperience {\n   const frontend = [HTML, CSS, JavaScript, TypeScript, React];\n   const backend = [Java, PostgreSql, nodeJS, Python, MySql, PHP];\n   let otherskills = [];\n   let passion = "A love for tech and being knowledgeable in it";\n   return {\n      developer: "Olando";\n      role: "Full Stack Web Developer"; \n      connect() => 'Let's build something';  \n   }; \n}`;
 	const roles = ["Web developer", "Software developer", "Frontend developer", "Backend developer", "Fullstack developer"];
+	const skills = [
+		{ name: "HTML5", icon: html, type: "Frontend" },
+		{ name: "CSS", icon: css, type: "Frontend" },
+		{ name: "JavaScript", icon: js, type: "Frontend" },
+		{ name: "TypeScript", icon: ts, type: "Frontend" },
+		{ name: "React", icon: react, type: "Frontend" },
+		{ name: "Tailwind CSS", icon: tailwind, type: "Frontend" },
+		{ name: "Node.js", icon: node, type: "Backend" },
+		{ name: "Java", icon: java, type: "Backend" },
+		{ name: "Python", icon: python, type: "Backend" },
+		{ name: "PHP", icon: php, type: "Backend" },
+		{ name: "PostgreSQL", icon: postgre, type: "Database" },
+		{ name: "MySQL", icon: mysql, type: "Database" },
+		{ name: "Git", icon: git, type: "Tooling" },
+		{ name: "Ruby on Rails", icon: ruby, type: "Backend" },
+	];
 
 	const [index, setIndex] = useState(0);
 	useEffect(() => {
@@ -46,6 +62,8 @@ function Hero() {
 						Welcome to my portfolio <br></br> I am a <span>{roles[index]}</span>
 						<span className="cursor"></span>
 					</h2>
+					<p className="welcome-copy">I build clean, reliable web apps with thoughtful UX and solid backend logic. This portfolio is a snapshot of the products, features and interfaces I have been designing while studying and working on personal projects.</p>
+					<p className="welcome-copy second">If you are looking for someone who can turn ideas into polished, production-ready experiences, you are in the right place.</p>
 				</div>
 				<div className="experience-div">
 					<div className="experience">
@@ -70,65 +88,19 @@ function Hero() {
 				</div>
 				<div className="languages">
 					<div className="language-header">
-						<p>Below are some of the programming languages, frameworks and software i have experience using:</p>
+						<h3>Technology Stack</h3>
+						<p>A snapshot of the languages, frameworks and tools I use to build performant user experiences and scalable full stack applications.</p>
 					</div>
 					<div className="language-icons">
-						<p>
-							HTML5
-							<img src={html} alt="html" />
-						</p>
-						<p>
-							CSS
-							<img src={css} alt="css" />
-						</p>
-						<p>
-							Javascript
-							<img src={js} alt="javascript" />
-						</p>
-						<p>
-							React
-							<img src={react} alt="react" />
-						</p>
-						<p>
-							Java
-							<img src={java} alt="java" />
-						</p>
-						<p>
-							Python
-							<img src={python} alt="python" />
-						</p>
-						<p>
-							Nodejs
-							<img src={node} alt="nodejs" />
-						</p>
-						<p>
-							Git
-							<img src={git} alt="git" />
-						</p>
-						<p>
-							MySql
-							<img src={mysql} alt="mysql" />
-						</p>
-						<p>
-							Postgresql
-							<img src={postgre} alt="postgresql" />
-						</p>
-						<p>
-							Ruby on Rails
-							<img src={ruby} alt="Ruby on Rails" />
-						</p>
-						<p>
-							PHP
-							<img src={php} alt="PHP" />
-						</p>
-						<p>
-							Tailwindcss
-							<img src={tailwind} alt="Tailwindcss" />
-						</p>
-						<p>
-							Typescript
-							<img src={ts} alt="Typescript" />
-						</p>
+						{skills.map((skill) => (
+							<div className="skill-card" key={skill.name}>
+								<img src={skill.icon} alt={skill.name} />
+								<div className="skill-card-text">
+									<strong>{skill.name}</strong>
+									<span>{skill.type}</span>
+								</div>
+							</div>
+						))}
 					</div>
 				</div>
 				<div className="iconsdiv">

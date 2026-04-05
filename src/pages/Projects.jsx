@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/main.css";
+import "../css/nav.css";
 import studentGuide from "../images/Student-guide.png";
 import studentGuideThumbNail from "../images/Student-guide_resize.png";
 import exoticCentral from "../images/Exotic-Central.png";
@@ -35,11 +35,46 @@ function Projects() {
 	};
 
 	const projects = [
-		{ name: "Fintech app", pic: fintech, thunmbnailpic: fintechThumbNail, url: "https://olando07.github.io/fintech-app/#/" },
-		{ name: "Pokemon app", pic: pokemon, thunmbnailpic: pokemonThumbNail, url: "https://olando07.github.io/Pokemon_app8/" },
-		{ name: "To Do List", pic: todoList, thunmbnailpic: todoListThumbNail, url: "https://olando07.github.io/To-do-list/" },
-		{ name: "RRC Student Guide", pic: studentGuide, thunmbnailpic: studentGuideThumbNail, url: "https://olando07.github.io/New-Student-Guide/" },
-		{ name: "Exotic Central", pic: exoticCentral, thunmbnailpic: exoticCentralThumbNail, url: "https://olando07.github.io/Olando_McDonald_P4/" },
+		{
+			name: "Fintech app",
+			pic: fintech,
+			thumbnailPic: fintechThumbNail,
+			url: "https://olando07.github.io/fintech-app/#/",
+			description: "A clean finance dashboard concept focused on account summaries, transaction visibility and data-first UI.",
+			stack: "React, JavaScript, CSS",
+		},
+		{
+			name: "Pokemon app",
+			pic: pokemon,
+			thumbnailPic: pokemonThumbNail,
+			url: "https://olando07.github.io/Pokemon_app8/",
+			description: "Interactive Pokedex-style application with searchable data, dynamic rendering and responsive layout handling.",
+			stack: "React, API Integration, CSS",
+		},
+		{
+			name: "To Do List",
+			pic: todoList,
+			thumbnailPic: todoListThumbNail,
+			url: "https://olando07.github.io/To-do-list/",
+			description: "Task management app with practical productivity features and a focused user flow for daily planning.",
+			stack: "JavaScript, Local Storage, CSS",
+		},
+		{
+			name: "RRC Student Guide",
+			pic: studentGuide,
+			thumbnailPic: studentGuideThumbNail,
+			url: "https://olando07.github.io/New-Student-Guide/",
+			description: "Resource hub designed to help new students navigate school tools, support options and onboarding information.",
+			stack: "HTML, CSS, JavaScript",
+		},
+		{
+			name: "Exotic Central",
+			pic: exoticCentral,
+			thumbnailPic: exoticCentralThumbNail,
+			url: "https://olando07.github.io/Olando_McDonald_P4/",
+			description: "A high-energy auto showcase layout featuring visual hierarchy, media highlights and branded presentation.",
+			stack: "React, CSS, UI Design",
+		},
 	];
 
 	return (
@@ -53,10 +88,15 @@ function Projects() {
 			<div className="project-demo">
 				{projects.map((project) => (
 					<div className="site-div" key={project.url}>
-						<img src={project.thunmbnailpic} alt={project.name} onClick={() => openLightbox(project.pic, project.name)} />
-						<a className="site-link" href={project.url} target="_blank" rel="noreferrer">
-							Click here to demo the site
-						</a>
+						<img src={project.thumbnailPic} alt={project.name} onClick={() => openLightbox(project.pic, project.name)} />
+						<div className="site-content">
+							<h3>{project.name}</h3>
+							<p>{project.description}</p>
+							<span className="project-stack">{project.stack}</span>
+							<a className="site-link" href={project.url} target="_blank" rel="noreferrer">
+								View Live Demo
+							</a>
+						</div>
 					</div>
 				))}
 			</div>

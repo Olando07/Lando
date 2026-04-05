@@ -27,11 +27,11 @@ function Header() {
 
 	return (
 		<>
-			<header className="header glass">
+			<header className={isMenuOpen ? "header glass h-16 menu-open" : "header glass h-16"}>
 				<div className="nav-links">
 					<nav className={isMenuOpen ? "nav active" : "nav"}>
-						<ul className="nav-ul flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
-							<li>
+						<ul className="nav-ul flex flex-col w-full sm:flex-row sm:space-y-0 sm:space-x-4">
+							<li className="py-1">
 								<Button type="button" className="w-full h-full" onClick={() => scrollToSection("hero")}>
 									Home
 								</Button>
