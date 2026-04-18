@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+    push:
+        branches:
+            - main
+            - development
+
+permissions:
+    contents: write # Needed to push to the gh-pages branch
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
+              with:
+                  bun-version: latest
+
+            # If you add a package.json later, you can uncomment these lines:
+            # - name: Install Dependencies
+            #   run: bun install
+            #
+            # - name: Build Project
+            #   run: bun run build
+
+            - name: Deploy to gh-pages branch
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: "."
+                  publish_branch: gh-pages
