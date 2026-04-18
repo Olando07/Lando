@@ -1,45 +1,270 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Lando's Portfolio - A showcase of my projects and skills." />
-        <meta name="author" content="Lando" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <script src="https://kit.fontawesome.com/7c3324e986.js" crossorigin="anonymous" async></script>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.0.1/Luminous.min.js"></script>
-        <link rel="icon" type="image/x-icon" href="/Lando/assets/favicon-CrU12PLP.ico" />
-        <script type="text/javascript">
-            // Single Page Apps for GitHub Pages
-            // MIT License
-            // https://github.com/rafgraph/spa-github-pages
-            // This script checks to see if a redirect is present in the query string,
-            // converts it back into the correct url and adds it to the
-            // browser's history using window.history.replaceState(...),
-            // which won't cause the browser to attempt to load the new url.
-            // When the single page app is loaded further down in this file,
-            // the correct url will be waiting in the browser's history for
-            // the single page app to route accordingly.
-            (function (l) {
-                if (l.search[1] === "/") {
-                    var decoded = l.search
-                        .slice(1)
-                        .split("&")
-                        .map(function (s) {
-                            return s.replace(/~and~/g, "&");
-                        })
-                        .join("?");
-                    window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
-                }
-            })(window.location);
-        </script>
-        <title>Lando's Portfolio</title>
-      <script type="module" crossorigin src="/Lando/assets/index-BGpNBh67.js"></script>
-      <link rel="stylesheet" crossorigin href="/Lando/assets/index-CvZAFT1i.css">
-    </head>
-    <body>
-        <div id="root"></div>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Lando's Portfolio - A showcase of my projects and skills." />
+		<title>Lando's Portfolio</title>
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+		<!-- Standard FontAwesome CDN (Fixed logos issue) -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+		<!-- Tailwind CSS (Blue Theme Configuration) -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				darkMode: "class",
+				theme: {
+					extend: {
+						colors: {
+							brand: {
+								DEFAULT: "#3b82f6", // Blue-500
+								dark: "#1e3a8a", // Blue-900
+								accent: "#60a5fa", // Blue-400
+							},
+						},
+					},
+				},
+			};
+		</script>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="bg-gray-50 text-gray-900 dark:bg-slate-950 dark:text-gray-100 font-sans transition-colors duration-300">
+		<!-- Navigation -->
+		<nav class="fixed w-full z-50 top-0 left-0 border-b border-gray-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
+			<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 min-h-[72px]">
+				<!-- Logo & Name -->
+				<a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+					<img src="images/cat-modified.png" class="h-10 w-10 object-cover rounded-full border-2 border-brand" alt="Lando Logo" />
+					<span class="self-center text-3xl font-extrabold whitespace-nowrap text-brand-dark dark:text-brand-accent tracking-tighter logo-text">Lando.</span>
+				</a>
+
+				<!-- Nav Links -->
+				<div class="hidden w-full md:block md:w-auto md:order-1" id="navbar-default">
+					<ul class="font-medium flex flex-col items-center p-4 md:p-0 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:border-0 dark:border-gray-700">
+						<li><a href="#about" class="block py-2 px-3 text-gray-900 rounded hover:text-brand dark:text-white dark:hover:text-brand-accent transition-colors">About</a></li>
+						<li><a href="#experience" class="block py-2 px-3 text-gray-900 rounded hover:text-brand dark:text-white dark:hover:text-brand-accent transition-colors">Experience</a></li>
+						<li><a href="#projects" class="block py-2 px-3 text-gray-900 rounded hover:text-brand dark:text-white dark:hover:text-brand-accent transition-colors">Projects</a></li>
+						<li><a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:text-brand dark:text-white dark:hover:text-brand-accent transition-colors">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Theme Toggle -->
+				<div class="flex items-center gap-4 md:order-2">
+					<button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg text-sm p-2.5">
+						<i id="theme-toggle-dark-icon" class="hidden fa-solid fa-moon text-xl"></i>
+						<i id="theme-toggle-light-icon" class="hidden fa-solid fa-sun text-xl"></i>
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Container -->
+		<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 w-full">
+			<!-- Hero Section -->
+			<section id="hero" class="flex flex-col lg:flex-row items-center justify-between gap-12 min-h-[70vh] py-12">
+				<div class="w-full lg:w-1/2 flex flex-col gap-6">
+					<div>
+						<h2 class="text-xl md:text-2xl text-brand font-medium mb-2">Hello, I'm</h2>
+						<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 dark:text-white">Olando</h1>
+						<div class="text-2xl md:text-3xl font-light text-gray-600 dark:text-gray-400 h-10">I am a <span id="typewriter" class="text-brand dark:text-brand-accent font-semibold"></span></div>
+					</div>
+
+					<p class="text-lg text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">A software developer passionate about crafting robust, user-friendly digital experiences. I bring ideas to life with clean code and modern technologies.</p>
+
+					<div class="flex gap-6 mt-4">
+						<a href="https://github.com/Olando07" target="_blank" class="text-3xl text-gray-700 hover:text-brand dark:text-gray-400 dark:hover:text-brand-accent transition-colors"><i class="fa-brands fa-github"></i></a>
+						<a href="https://linkedin.com/in/olando-mcdonald-9bb708345" target="_blank" class="text-3xl text-gray-700 hover:text-brand dark:text-gray-400 dark:hover:text-brand-accent transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="https://discordapp.com/users/1187420875662827590" target="_blank" class="text-3xl text-gray-700 hover:text-brand dark:text-gray-400 dark:hover:text-brand-accent transition-colors"><i class="fa-brands fa-discord"></i></a>
+						<a href="https://instagram.com/" target="_blank" class="text-3xl text-gray-700 hover:text-brand dark:text-gray-400 dark:hover:text-brand-accent transition-colors"><i class="fa-brands fa-instagram"></i></a>
+					</div>
+				</div>
+
+				<!-- macOS Terminal Window -->
+				<div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+					<div class="w-full max-w-[600px] rounded-xl overflow-hidden shadow-2xl bg-[#1e1e1e] border border-gray-700">
+						<div class="flex items-center px-4 py-3 bg-[#2d2d2d] border-b border-gray-700">
+							<div class="flex gap-2">
+								<div class="w-3 h-3 rounded-full bg-red-500"></div>
+								<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+								<div class="w-3 h-3 rounded-full bg-green-500"></div>
+							</div>
+							<div class="mx-auto text-xs text-gray-400 font-mono">developer.js</div>
+						</div>
+						<div class="p-6 overflow-x-auto text-sm md:text-base font-mono text-gray-300">
+							<pre><code class="language-javascript"><span class="text-purple-400">function</span> <span class="text-blue-400">loadExperience</span>() {
+  <span class="text-purple-400">const</span> <span class="text-yellow-200">frontend</span> = [<span class="text-green-400">'HTML'</span>, <span class="text-green-400">'CSS'</span>, <span class="text-green-400">'JS'</span>, <span class="text-green-400">'React'</span>];
+  <span class="text-purple-400">const</span> <span class="text-yellow-200">backend</span> = [<span class="text-green-400">'Node'</span>, <span class="text-green-400">'Java'</span>, <span class="text-green-400">'Python'</span>, <span class="text-green-400">'SQL'</span>];
+  
+  <span class="text-purple-400">return</span> {
+    <span class="text-blue-300">developer</span>: <span class="text-green-400">"Olando"</span>,
+    <span class="text-blue-300">passion</span>: <span class="text-green-400">"Full Stack Web Developer"</span>,
+    <span class="text-blue-400">connect</span>: () <span class="text-purple-400">=></span> <span class="text-green-400">"Let's build something!"</span>
+  };
+}</code></pre>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- About & Skills Section -->
+			<section id="about" class="py-20 border-t border-gray-200 dark:border-slate-800">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+					<!-- About Me -->
+					<div>
+						<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
+						<div class="w-16 h-1 bg-brand rounded-full mb-6"></div>
+						<p class="text-lg text-gray-600 dark:text-gray-400 mb-4">Hi, I'm Olando! Born in 2007, I'm a passionate and dedicated software developer looking to craft robust, user-friendly digital experiences. I bring ideas to life with clean code and modern technologies.</p>
+						<p class="text-lg text-gray-600 dark:text-gray-400 mb-4">Beyond the screen, I have a plethora of interests! I love sports (especially football &mdash; my favorite team is Barça), cars (my absolute favorite is the G82 M4), and enjoying good food (pastries are my top pick right now).</p>
+						<p class="text-lg text-gray-600 dark:text-gray-400">I'm also a big fan of anime, currently enjoying <em>Classroom of the Elite</em> and <em>Steel Ball Run</em>. I enjoy games of all kinds as well, though I haven't played much lately and don't have a single favorite right now. When I do find time to code for fun, I'm constantly learning new frameworks and stretching my technical abilities.</p>
+					</div>
+
+					<!-- Skills / Languages -->
+					<div>
+						<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Languages & Skills</h2>
+						<div class="w-16 h-1 bg-brand rounded-full mb-6"></div>
+						<div class="grid grid-cols-3 sm:grid-cols-4 gap-6">
+							<!-- Skill Icons from local images dir -->
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-html-48.png" alt="HTML" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(227,79,38,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">HTML5</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-css-48.png" alt="CSS" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(21,114,182,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">CSS3</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-js-48.png" alt="JS" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(247,223,30,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">JavaScript</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-typescript-48.png" alt="TypeScript" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(49,120,198,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">TypeScript</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-react-48.png" alt="React" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(97,218,251,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">React</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-nodejs-48.png" alt="Node" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(83,158,67,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">Node JS</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-python-48.png" alt="Python" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(55,118,171,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">Python</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-java-48.png" alt="Java" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(248,152,32,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">Java</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-php-48.png" alt="PHP" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(119,123,180,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">PHP</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-ruby-on-rails-48.png" alt="Ruby" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(204,52,45,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">Ruby</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-mysql-48.png" alt="MySQL" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(68,121,161,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">MySQL</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-postgresql-48.png" alt="PostgreSQL" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(51,103,145,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">PostgreSQL</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-git-48.png" alt="Git" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(240,80,50,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">Git</span></div>
+							<div class="group flex flex-col items-center gap-2 transition-transform hover:-translate-y-1"><img src="images/icons8-tailwindcss-48.png" alt="Tailwind" class="w-12 h-12 transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(6,182,212,0.9)]" /><span class="text-sm dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">Tailwind</span></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Experience & Education Section -->
+			<section id="experience" class="py-20 border-t border-gray-200 dark:border-slate-800">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Experience & Education</h2>
+					<div class="w-24 h-1 bg-brand mx-auto rounded-full"></div>
+				</div>
+
+				<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+					<!-- Experience -->
+					<div>
+						<div class="flex items-center gap-3 mb-8">
+							<i class="fa-solid fa-briefcase text-2xl text-brand"></i>
+							<h3 class="text-2xl font-bold text-gray-900 dark:text-white">Experience</h3>
+						</div>
+
+						<div class="relative border-l-2 border-brand/30 pl-8 ml-3 space-y-10">
+							<!-- Experience Item: Co-op -->
+							<div class="relative">
+								<div class="absolute -left-[41px] bg-brand w-5 h-5 rounded-full border-4 border-white dark:border-slate-950"></div>
+								<h4 class="text-xl font-bold text-gray-900 dark:text-white">Full Stack Developer Co-op</h4>
+								<div class="text-sm font-semibold text-brand mb-2">Jan 2026 - Apr 2026</div>
+								<p class="text-gray-600 dark:text-gray-400">Developed a web application for an external client in the college's project space alongside an amazing team. Built out features using Next.js, Prisma, NextAuth, Tailwind CSS, and Leaflet, leveraging GitHub Copilot. Thrived in an Agile environment with active sprint planning and retrospectives, focusing heavily on team collaboration and direct client communication.</p>
+							</div>
+
+							<!-- Add more experience items here if needed in the future -->
+						</div>
+					</div>
+
+					<!-- Education -->
+					<div>
+						<div class="flex items-center gap-3 mb-8">
+							<i class="fa-solid fa-graduation-cap text-2xl text-brand"></i>
+							<h3 class="text-2xl font-bold text-gray-900 dark:text-white">Education</h3>
+						</div>
+
+						<div class="relative border-l-2 border-brand/30 pl-8 ml-3 space-y-10">
+							<!-- Education Item -->
+							<div class="relative">
+								<div class="absolute -left-[41px] bg-brand w-5 h-5 rounded-full border-4 border-white dark:border-slate-950"></div>
+								<h4 class="text-xl font-bold text-gray-900 dark:text-white">Full Stack Web Development Course</h4>
+								<div class="text-sm font-semibold text-brand mb-2">Jan 2025 - May 1st, 2026</div>
+								<p class="text-gray-600 dark:text-gray-400">Currently wrapping up an intensive FSWD program (completing on May 1st!). Gained deep hands-on expertise building end-to-end applications from the ground up, mastering frontend UI/UX and complex backend database integrations.</p>
+							</div>
+							<!-- High School / Other -->
+							<div class="relative">
+								<div class="absolute -left-[41px] bg-brand/40 w-5 h-5 rounded-full border-4 border-white dark:border-slate-950"></div>
+								<h4 class="text-xl font-bold text-gray-900 dark:text-white">Self-Taught Programmer</h4>
+								<div class="text-sm font-semibold text-brand/70 mb-2">Late 2024 - Present</div>
+								<p class="text-gray-600 dark:text-gray-400">Started my coding journey by intensely self-studying for 2-3 months prior to starting my formal course in 2025. Continuously expanding my knowledge across various programming languages and software engineering best practices.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Projects Section -->
+			<section id="projects" class="py-20 border-t border-gray-200 dark:border-slate-800">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
+					<div class="w-24 h-1 bg-brand mx-auto rounded-full"></div>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+					<!-- Javascript will inject projects here -->
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<section id="contact" class="py-20 border-t border-gray-200 dark:border-slate-800">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Contact Me</h2>
+					<div class="w-24 h-1 bg-brand mx-auto rounded-full"></div>
+					<p class="mt-6 text-lg text-gray-600 dark:text-gray-400">Feel free to reach out for collaborations or just a friendly hello!</p>
+				</div>
+				<div class="max-w-2xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-slate-800">
+					<form
+						action="#"
+						class="flex flex-col gap-6"
+						onsubmit="
+							event.preventDefault();
+							alert('Message sent successfully!');
+						"
+					>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+								<input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="Your Name" required />
+							</div>
+							<div>
+								<label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+								<input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="your.email@example.com" required />
+							</div>
+						</div>
+						<div>
+							<label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+							<textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="Your message here..." required></textarea>
+						</div>
+						<button type="submit" class="w-full py-4 px-6 bg-brand hover:bg-brand-dark text-white font-bold rounded-lg transition-colors text-lg flex items-center justify-center gap-2">
+							<i class="fa-regular fa-paper-plane"></i>
+							Send Message
+						</button>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="bg-white dark:bg-slate-950 border-t border-gray-200 dark:border-slate-800 py-8 mt-20">
+			<div class="max-w-7xl mx-auto px-4 text-center">
+				<h2 class="text-2xl font-bold text-brand-dark dark:text-brand-accent logo-text mb-4">Lando.</h2>
+				<p class="text-gray-500 max-w-md mx-auto mb-6">Designed and developed with precision. Exploring the future of web technologies.</p>
+				<p class="text-sm text-gray-400">© 2026 Olando. All Rights Reserved.</p>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
 </html>

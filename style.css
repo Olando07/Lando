@@ -1,0 +1,67 @@
+/* Base Resets */
+:root {
+  color-scheme: light dark;
+}
+html.dark {
+  color-scheme: dark;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+body.dark {
+  background-color: #020617; /* Slate-950 base for pure blue dark theme */
+  color: #f1f5f9;
+}
+
+.logo-text {
+  font-family: "Comfortaa", cursive;
+}
+
+pre code {
+  font-family: 'Lexend', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* Blue-500 */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3a8a; /* Blue-900 */
+}
+
+/* Typewriter cursor effect */
+#typewriter::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Code block highlight */
+.language-javascript .text-purple-400 { color: #c678dd; }
+.language-javascript .text-blue-400 { color: #61afef; }
+.language-javascript .text-blue-300 { color: #56b6c2; }
+.language-javascript .text-yellow-200 { color: #e5c07b; }
+.language-javascript .text-green-400 { color: #98c379; }
