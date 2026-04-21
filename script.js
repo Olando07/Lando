@@ -132,4 +132,59 @@ document.addEventListener("DOMContentLoaded", () => {
 			projectsGrid.appendChild(card);
 		});
 	}
+
+	// EmailJS Contact Form Setup
+	// IMPORTANT: Initialize with your actual EmailJS Public Key
+	if (typeof emailjs !== "undefined") {
+		emailjs.init("tCXWVAXu2nipTH7Gk");
+	}
+
+	const contactForm = document.getElementById("contact-form");
+	if (contactForm) {
+		contactForm.addEventListener("submit", function (e) {
+			e.preventDefault();
+			const submitBtn = this.querySelector('button[type="submit"]');
+			const originalText = submitBtn.innerHTML;
+
+			submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+			submitBtn.disabled = true;
+
+			// Basic client-side validation logic
+			const emailInput = document.getElementById("email").value;
+			const phoneInput = document.getElementById("phone").value;
+
+			// Simple fallback check in JS
+			const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+			const phoneRegex = /^[\d\s\-\+\(\)]{7,20}$/;
+
+			if (!emailRegex.test(emailInput)) {
+				alert("Please enter a valid email address.");
+				submitBtn.innerHTML = originalText;
+				submitBtn.disabled = false;
+				return;
+			}
+
+			if (!phoneRegex.test(phoneInput)) {
+				alert("Please enter a valid phone number.");
+				submitBtn.innerHTML = originalText;
+				submitBtn.disabled = false;
+				return;
+			}
+
+			// Replace with your Service ID and Template ID
+			emailjs.sendForm("service_rptcm8r", "template_r63zw8q", this).then(
+				() => {
+					alert("Message sent successfully!");
+					contactForm.reset();
+					submitBtn.innerHTML = originalText;
+					submitBtn.disabled = false;
+				},
+				(error) => {
+					alert("Failed to send message... Error: " + JSON.stringify(error));
+					submitBtn.innerHTML = originalText;
+					submitBtn.disabled = false;
+				},
+			);
+		});
+	}
 });

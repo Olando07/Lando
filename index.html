@@ -14,6 +14,9 @@
 		<!-- Standard FontAwesome CDN (Fixed logos issue) -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+		<!-- EmailJS -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 		<!-- Tailwind CSS (Blue Theme Configuration) -->
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
@@ -159,46 +162,52 @@
 
 				<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
 					<!-- Experience -->
-					<div>
-						<div class="flex items-center gap-3 mb-8">
-							<i class="fa-solid fa-briefcase text-2xl text-brand"></i>
-							<h3 class="text-2xl font-bold text-gray-900 dark:text-white">Experience</h3>
-						</div>
-
-						<div class="relative border-l-2 border-brand/30 pl-8 ml-3 space-y-10">
-							<!-- Experience Item: Co-op -->
-							<div class="relative">
-								<div class="absolute -left-[41px] bg-brand w-5 h-5 rounded-full border-4 border-white dark:border-slate-950"></div>
-								<h4 class="text-xl font-bold text-gray-900 dark:text-white">Full Stack Developer Co-op</h4>
-								<div class="text-sm font-semibold text-brand mb-2">Jan 2026 - Apr 2026</div>
-								<p class="text-gray-600 dark:text-gray-400">Developed a web application for an external client in the college's project space alongside an amazing team. Built out features using Next.js, Prisma, NextAuth, Tailwind CSS, and Leaflet, leveraging GitHub Copilot. Thrived in an Agile environment with active sprint planning and retrospectives, focusing heavily on team collaboration and direct client communication.</p>
+					<div class="relative group">
+						<div class="absolute -inset-1 bg-brand/30 dark:bg-brand/40 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+						<div class="relative bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-xl p-8 z-10 transition-all">
+							<div class="flex items-center gap-3 mb-8">
+								<i class="fa-solid fa-briefcase text-2xl text-brand"></i>
+								<h3 class="text-2xl font-bold text-gray-900 dark:text-white">Experience</h3>
 							</div>
 
-							<!-- Add more experience items here if needed in the future -->
+							<div class="relative border-l-2 border-brand/30 pl-8 ml-3 space-y-10">
+								<!-- Experience Item: Co-op -->
+								<div class="relative">
+									<div class="absolute -left-[41px] bg-brand w-5 h-5 rounded-full border-4 border-white dark:border-slate-950"></div>
+									<h4 class="text-xl font-bold text-gray-900 dark:text-white">Full Stack Developer Co-op</h4>
+									<div class="text-sm font-semibold text-brand mb-2">Jan 2026 - Apr 2026</div>
+									<p class="text-gray-600 dark:text-gray-400">Developed a web application for an external client in the college's project space alongside an amazing team. Built out features using Next.js, Prisma, NextAuth, Tailwind CSS, and Leaflet, leveraging GitHub Copilot. Thrived in an Agile environment with active sprint planning and retrospectives, focusing heavily on team collaboration and direct client communication.</p>
+								</div>
+
+								<!-- Add more experience items here if needed in the future -->
+							</div>
 						</div>
 					</div>
 
 					<!-- Education -->
-					<div>
-						<div class="flex items-center gap-3 mb-8">
-							<i class="fa-solid fa-graduation-cap text-2xl text-brand"></i>
-							<h3 class="text-2xl font-bold text-gray-900 dark:text-white">Education</h3>
-						</div>
-
-						<div class="relative border-l-2 border-brand/30 pl-8 ml-3 space-y-10">
-							<!-- Education Item -->
-							<div class="relative">
-								<div class="absolute -left-[41px] bg-brand w-5 h-5 rounded-full border-4 border-white dark:border-slate-950"></div>
-								<h4 class="text-xl font-bold text-gray-900 dark:text-white">Full Stack Web Development</h4>
-								<div class="text-sm font-semibold text-brand mb-2">Red River College | Jan 2025 - May 1st, 2026</div>
-								<p class="text-gray-600 dark:text-gray-400">Currently wrapping up this intensive program (completing on May 1st!). Gained deep hands-on expertise building end-to-end applications from the ground up, mastering frontend UI/UX and complex backend database integrations.</p>
+					<div class="relative group">
+						<div class="absolute -inset-1 bg-brand/30 dark:bg-brand/40 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+						<div class="relative bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-xl p-8 z-10 transition-all">
+							<div class="flex items-center gap-3 mb-8">
+								<i class="fa-solid fa-graduation-cap text-2xl text-brand"></i>
+								<h3 class="text-2xl font-bold text-gray-900 dark:text-white">Education</h3>
 							</div>
-							<!-- High School / Other -->
-							<div class="relative">
-								<div class="absolute -left-[41px] bg-brand/40 w-5 h-5 rounded-full border-4 border-white dark:border-slate-950"></div>
-								<h4 class="text-xl font-bold text-gray-900 dark:text-white">Self-Taught Programmer</h4>
-								<div class="text-sm font-semibold text-brand/70 mb-2">Late 2024 - Present</div>
-								<p class="text-gray-600 dark:text-gray-400">Started my coding journey by intensely self-studying for 2-3 months prior to starting my formal course in 2025. Continuously expanding my knowledge across various programming languages and software engineering best practices.</p>
+
+							<div class="relative border-l-2 border-brand/30 pl-8 ml-3 space-y-10">
+								<!-- Education Item -->
+								<div class="relative">
+									<div class="absolute -left-[41px] bg-brand w-5 h-5 rounded-full border-4 border-white dark:border-slate-950"></div>
+									<h4 class="text-xl font-bold text-gray-900 dark:text-white">Full Stack Web Development</h4>
+									<div class="text-sm font-semibold text-brand mb-2">Red River College | Jan 2025 - May 1st, 2026</div>
+									<p class="text-gray-600 dark:text-gray-400">Currently wrapping up this intensive program (completing on May 1st!). Gained deep hands-on expertise building end-to-end applications from the ground up, mastering frontend UI/UX and complex backend database integrations.</p>
+								</div>
+								<!-- High School / Other -->
+								<div class="relative">
+									<div class="absolute -left-[41px] bg-brand/40 w-5 h-5 rounded-full border-4 border-white dark:border-slate-950"></div>
+									<h4 class="text-xl font-bold text-gray-900 dark:text-white">Self-Taught Programmer</h4>
+									<div class="text-sm font-semibold text-brand/70 mb-2">Late 2024 - Present</div>
+									<p class="text-gray-600 dark:text-gray-400">Started my coding journey by intensely self-studying for 2-3 months prior to starting my formal course in 2025. Continuously expanding my knowledge across various programming languages and software engineering best practices.</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -224,34 +233,34 @@
 					<div class="w-24 h-1 bg-brand mx-auto rounded-full"></div>
 					<p class="mt-6 text-lg text-gray-600 dark:text-gray-400">Feel free to reach out for collaborations or just a friendly hello!</p>
 				</div>
-				<div class="max-w-2xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-slate-800">
-					<form
-						action="#"
-						class="flex flex-col gap-6"
-						onsubmit="
-							event.preventDefault();
-							alert('Message sent successfully!');
-						"
-					>
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-							<div>
-								<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
-								<input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="Your Name" required />
+				<div class="relative max-w-2xl mx-auto group">
+					<div class="absolute -inset-1 bg-brand/30 dark:bg-brand/40 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+					<div class="relative bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-slate-800">
+						<form id="contact-form" class="flex flex-col gap-6">
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+								<div>
+									<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+									<input type="text" id="name" name="from_name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="Your Name" required pattern="^[a-zA-Z\s]{2,50}$" title="Name must contain only letters and spaces, and be between 2 and 50 characters long." />
+								</div>
+								<div>
+									<label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+									<input type="email" id="email" name="reply_to" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="your.email@example.com" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address." />
+								</div>
 							</div>
 							<div>
-								<label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
-								<input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="your.email@example.com" required />
+								<label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone</label>
+								<input type="tel" id="phone" name="phone_number" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="Your Phone Number" required pattern="^[\d\s\-\+\(\)]{7,20}$" title="Please enter a valid phone number." />
 							</div>
-						</div>
-						<div>
-							<label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
-							<textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="Your message here..." required></textarea>
-						</div>
-						<button type="submit" class="w-full py-4 px-6 bg-brand hover:bg-brand-dark text-white font-bold rounded-lg transition-colors text-lg flex items-center justify-center gap-2">
-							<i class="fa-regular fa-paper-plane"></i>
-							Send Message
-						</button>
-					</form>
+							<div>
+								<label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+								<textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-brand transition-colors outline-none" placeholder="Your message here..." required></textarea>
+							</div>
+							<button type="submit" class="w-full py-4 px-6 bg-brand hover:bg-brand-dark text-white font-bold rounded-lg transition-colors text-lg flex items-center justify-center gap-2 group/btn">
+								<i class="fa-regular fa-paper-plane group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"></i>
+								Send Message
+							</button>
+						</form>
+					</div>
 				</div>
 			</section>
 		</main>
