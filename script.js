@@ -76,10 +76,17 @@ document.addEventListener("DOMContentLoaded", () => {
 			pic: "images/fintech-dashboard-resize.png",
 			repo: "https://github.com/Olando07/fintech-app",
 			url: "https://olando07.github.io/fintech-app/",
-			tags: ["React", "JavaScript", "Tailwind", "CSS"],
+			tags: ["React", "JavaScript", "Tailwind", "CSS", "Groq AI"],
 		},
 		{
-			name: "Pokemon Info",
+			name: "Pokemon Info App",
+			pic: "images/pokemon_info.png",
+			repo: "https://github.com/Olando07/RRC-AFSWD_IntroToRails",
+			url: "#",
+			tags: ["Ruby On Rails", "Bulma CSS", "Faker", "SQLite", "Kaminari"],
+		},
+		{
+			name: "Pokemon Game",
 			pic: "images/pokemon_resize.png",
 			repo: "https://github.com/Olando07/Pokemon_app8",
 			url: "https://olando07.github.io/Pokemon_app8/",
@@ -90,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			pic: "images/ToDo-List_resize.png",
 			repo: "https://github.com/Olando07/To-do-list",
 			url: "https://olando07.github.io/To-do-list/",
-			tags: ["React", "JavaScript", "CSS"],
+			tags: ["React", "JavaScript", "TailwindCSS"],
 		},
 		{
 			name: "Exotic Central",
@@ -111,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const projectsGrid = document.getElementById("projects-grid");
 	if (projectsGrid) {
 		projects.forEach((project) => {
-			const tagsHtml = project.tags ? project.tags.map((tag) => `<span class="px-3 py-1 bg-brand/10 text-brand dark:bg-brand/20 dark:text-brand-accent text-xs font-semibold rounded-full">${tag}</span>`).join("") : "";
+			const tagsHtml = project.tags ? project.tags.map((tag) => `<span class="px-2 py-0.5 bg-brand/10 text-brand dark:bg-brand/20 dark:text-brand-accent text-xs font-semibold rounded-full">${tag}</span>`).join("") : "";
 			const card = document.createElement("div");
 			card.className = "flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-slate-800 transition-transform duration-300 hover:-translate-y-2";
 			card.innerHTML = `
@@ -120,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
                     <h3 class="text-xl font-bold mb-3 dark:text-white">${project.name}</h3>
-                    <div class="flex flex-wrap gap-2 mb-6 flex-grow">
+                    <div class="flex flex-wrap content-start gap-2 mb-6 flex-grow">
                         ${tagsHtml}
                     </div>
                     <div class="flex gap-4 mt-auto">
